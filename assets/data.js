@@ -459,7 +459,7 @@ const FACTS=[
 // Mock exams: questions drawn at random from the whole bank, 1 mark each
 const MOCK_INTRO="Quick-fire practice sets drawn from the whole question bank. The real SQA exam is <strong>one question paper</strong>: 1 hour 20 minutes · 40 marks (scaled to 50) · Section 1 Expressive Art Studies (20 marks) and Section 2 Design Studies (20 marks) — in each section answer the mandatory question plus ONE optional question.";
 const MOCK_PAPERS=[{"key": "paper1", "title": "Practice Set 1 — Mixed Questions", "short": "Set 1", "desc": "25 questions · 30 minutes · all units", "n": 25, "mins": 30}, {"key": "paper2", "title": "Practice Set 2 — Mixed Questions", "short": "Set 2", "desc": "25 questions · 40 minutes · all units", "n": 25, "mins": 40}];
-const MOCK_GRADES=[{"min": 85, "grade": "A", "msg": "Outstanding! An A-grade performance."}, {"min": 70, "grade": "B", "msg": "Well done! Review the questions you dropped to push for an A."}, {"min": 60, "grade": "C", "msg": "Good effort! Target your weakest topics to move up."}, {"min": 45, "grade": "D", "msg": "Keep revising — use Smart Mix to work on the topics you found hardest."}, {"min": 0, "grade": "No Award", "msg": "Don't give up! Review your answers, then try again."}];
+const MOCK_GRADES=[{"min": 70, "grade": "A", "msg": "Outstanding! An A-grade performance."}, {"min": 60, "grade": "B", "msg": "Well done! Review the questions you dropped to push for an A."}, {"min": 50, "grade": "C", "msg": "Good effort! Target your weakest topics to move up."}, {"min": 40, "grade": "D", "msg": "Keep revising — use Smart Mix to work on the topics you found hardest."}, {"min": 0, "grade": "No Award", "msg": "Don't give up! Review your answers, then try again."}];
 
 const EXAM_TIPS=[
  [
