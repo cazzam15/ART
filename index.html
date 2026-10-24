@@ -1,1743 +1,460 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Free Nat 5 Art &amp; Design Revision — Scotland</title>
 <meta name="description" content="Free Nat 5 Art &amp; Design revision for Scotland. Exam vocab, visual elements, design issues, influences and more.">
+<meta property="og:title" content="Free Nat 5 Art &amp; Design Revision — Scotland">
+<meta property="og:description" content="Free Nat 5 Art &amp; Design revision for Scotland. Exam vocab, visual elements, design issues, influences and more.">
+<meta property="og:type" content="website">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0065bd">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Nat 5 Art &amp; Design">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root {
-  --bg: #0d1117;
-  --surface: #161b22;
-  --card: #1c2330;
-  --border: #30363d;
-  --accent: #3fb950;
-  --accent-glow: rgba(63,185,80,0.15);
-  --accent2: #f85149;
-  --accent3: #d29922;
-  --accent4: #58a6ff;
-  --accent5: #bc8cff;
-  --text: #e6edf3;
-  --muted: #8b949e;
-  --radius: 12px;
-  --nav-h: 56px;
-  font-size: 15px;
-}
-*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
-button{font-family:'Nunito',sans-serif;cursor:pointer}
-
-/* ── TOP BAR ── */
-.topbar{
-  position:sticky;top:0;z-index:100;
-  background:rgba(13,17,23,0.92);backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--border);
-  display:flex;align-items:center;gap:10px;
-  padding:0 16px;height:54px;
-}
-.topbar-logo{
-  font-size:1.1rem;font-weight:900;color:var(--text);
-  display:flex;align-items:center;gap:6px;flex:1;
-}
-.topbar-logo span{color:var(--accent)}
-.xp-pill{
-  display:flex;align-items:center;gap:6px;
-  background:var(--card);border:1px solid var(--border);
-  border-radius:100px;padding:5px 10px;font-size:0.75rem;
-  font-weight:700;font-family:'DM Mono',monospace;
-}
-.xp-pill .xp-val{color:var(--accent3)}
-.streak-pill{
-  display:flex;align-items:center;gap:4px;
-  background:var(--card);border:1px solid var(--border);
-  border-radius:100px;padding:5px 10px;font-size:0.75rem;
-  font-weight:700;
-}
-.streak-pill .fire{font-size:1rem}
-.lv-badge{
-  background:var(--accent5);color:#fff;border-radius:100px;
-  padding:3px 9px;font-size:0.7rem;font-weight:800;
-}
-
-/* ── NAV TABS ── */
-.nav-scroll{
-  display:flex;overflow-x:auto;gap:4px;
-  padding:8px 12px;background:var(--surface);
-  border-bottom:1px solid var(--border);
-  scrollbar-width:none;
-}
-.nav-scroll::-webkit-scrollbar{display:none}
-.nav-btn{
-  flex-shrink:0;display:flex;align-items:center;gap:5px;
-  background:transparent;border:1.5px solid transparent;
-  border-radius:100px;padding:6px 13px;
-  font-size:0.78rem;font-weight:700;color:var(--muted);
-  white-space:nowrap;transition:all 0.15s;
-}
-.nav-btn:hover{color:var(--text);border-color:var(--border)}
-.nav-btn.active{
-  background:var(--accent-glow);border-color:var(--accent);
-  color:var(--accent);
-}
-.nav-btn .nb-icon{font-size:1rem}
-
-/* ── PAGES ── */
-.page{display:none;padding:16px;max-width:700px;margin:0 auto;padding-bottom:80px}
-.page.active{display:block;animation:fadeIn 0.2s ease}
-@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-
-/* ── HERO (Practice page) ── */
-.hero{
-  background:linear-gradient(135deg,#1a2840 0%,#1c2f1e 100%);
-  border:1px solid var(--border);border-radius:16px;
-  padding:20px;margin-bottom:16px;position:relative;overflow:hidden;
-}
-.hero::before{
-  content:'🧬';position:absolute;right:16px;top:50%;transform:translateY(-50%);
-  font-size:4rem;opacity:0.12;
-}
-.hero h1{font-size:1.4rem;font-weight:900;line-height:1.2;margin-bottom:4px}
-.hero h1 span{color:var(--accent)}
-.hero p{font-size:0.82rem;color:var(--muted)}
-
-/* ── DAILY GOAL BAR ── */
-.goal-bar{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:var(--radius);padding:12px 16px;margin-bottom:16px;
-  display:flex;align-items:center;gap:12px;
-}
-.goal-bar-track{flex:1;height:8px;background:var(--border);border-radius:4px;overflow:hidden}
-.goal-bar-fill{height:100%;background:linear-gradient(90deg,var(--accent),#7ee787);border-radius:4px;transition:width 0.5s}
-.goal-label{font-size:0.75rem;color:var(--muted);font-family:'DM Mono',monospace;white-space:nowrap}
-.goal-val{font-weight:800;color:var(--accent)}
-
-/* ── SELECTORS ── */
-.selector-row{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
-.selector{
-  flex:1;min-width:120px;background:var(--card);
-  border:1.5px solid var(--border);border-radius:10px;
-  padding:8px 10px;color:var(--text);font-family:'Nunito',sans-serif;
-  font-size:0.82rem;font-weight:600;outline:none;
-  appearance:none;cursor:pointer;
-}
-.selector:focus{border-color:var(--accent4)}
-.selector option{background:var(--card)}
-
-/* ── QUESTION CARD ── */
-.q-card{
-  background:var(--card);border:1.5px solid var(--border);
-  border-radius:16px;padding:20px;margin-bottom:14px;
-  animation:fadeIn 0.25s ease;
-}
-.q-card-header{
-  display:flex;align-items:center;gap:8px;margin-bottom:14px;flex-wrap:wrap;
-}
-.q-tag{
-  background:rgba(88,166,255,0.12);border:1px solid rgba(88,166,255,0.25);
-  color:var(--accent4);border-radius:100px;padding:2px 10px;
-  font-size:0.68rem;font-family:'DM Mono',monospace;letter-spacing:1px;
-}
-.q-tag.hard{background:rgba(248,81,73,0.12);border-color:rgba(248,81,73,0.25);color:var(--accent2)}
-.q-tag.easy{background:rgba(63,185,80,0.12);border-color:rgba(63,185,80,0.25);color:var(--accent)}
-.q-num{font-size:0.72rem;color:var(--muted);font-family:'DM Mono',monospace;margin-left:auto}
-.q-text{font-size:1rem;font-weight:700;line-height:1.45;margin-bottom:16px}
-
-/* MCQ options */
-.opts{display:grid;gap:9px}
-.opt-btn{
-  display:flex;align-items:center;gap:10px;
-  background:var(--surface);border:1.5px solid var(--border);
-  border-radius:10px;padding:11px 14px;
-  text-align:left;color:var(--text);font-size:0.88rem;font-weight:600;
-  transition:all 0.15s;
-}
-.opt-btn:hover:not(:disabled){border-color:var(--accent4);background:rgba(88,166,255,0.06)}
-.opt-letter{
-  font-family:'DM Mono',monospace;font-size:0.72rem;
-  background:var(--border);border-radius:6px;
-  width:24px;height:24px;display:flex;align-items:center;justify-content:center;
-  flex-shrink:0;transition:all 0.15s;font-weight:500;
-}
-.opt-btn:hover:not(:disabled) .opt-letter{background:var(--accent4);color:#0d1117}
-.opt-btn.correct{border-color:var(--accent);background:rgba(63,185,80,0.1)}
-.opt-btn.correct .opt-letter{background:var(--accent);color:#0d1117}
-.opt-btn.wrong{border-color:var(--accent2);background:rgba(248,81,73,0.1)}
-.opt-btn.wrong .opt-letter{background:var(--accent2);color:#fff}
-.opt-btn:disabled{cursor:default}
-
-/* fill-in */
-.fill-input{
-  width:100%;background:var(--surface);border:1.5px solid var(--border);
-  border-radius:10px;padding:11px 14px;color:var(--text);font-size:0.95rem;
-  font-family:'Nunito',sans-serif;outline:none;margin-bottom:10px;transition:border-color 0.2s;
-}
-.fill-input:focus{border-color:var(--accent4)}
-.fill-input.correct{border-color:var(--accent)}
-.fill-input.wrong{border-color:var(--accent2)}
-
-/* action buttons */
-.btn-row{display:flex;gap:8px;margin-top:4px;flex-wrap:wrap}
-.btn{
-  flex:1;min-width:90px;padding:11px 16px;border-radius:10px;
-  font-size:0.85rem;font-weight:800;border:none;transition:all 0.15s;
-}
-.btn:hover{transform:translateY(-1px)}
-.btn-green{background:var(--accent);color:#0d1117}
-.btn-blue{background:transparent;border:1.5px solid var(--accent4);color:var(--accent4)}
-.btn-ghost{background:transparent;border:1.5px solid var(--border);color:var(--muted)}
-.btn-ghost:hover{color:var(--text);border-color:var(--muted)}
-.btn-red{background:transparent;border:1.5px solid var(--accent2);color:var(--accent2)}
-
-/* explanation */
-.explanation{
-  margin-top:12px;background:rgba(63,185,80,0.06);
-  border:1px solid rgba(63,185,80,0.2);border-radius:10px;
-  padding:12px 14px;font-size:0.82rem;line-height:1.6;
-  display:none;animation:fadeIn 0.2s ease;
-}
-.explanation.show{display:block}
-.explanation .expl-label{color:var(--accent);font-weight:800;margin-bottom:4px}
-
-/* ── XP TOAST ── */
-.xp-toast{
-  position:fixed;top:70px;right:16px;z-index:999;
-  background:var(--accent);color:#0d1117;
-  border-radius:100px;padding:8px 16px;
-  font-weight:800;font-size:0.85rem;
-  opacity:0;transform:translateY(-10px);transition:all 0.3s;pointer-events:none;
-}
-.xp-toast.show{opacity:1;transform:translateY(0)}
-
-/* ── SECTION LABELS ── */
-.section-label{
-  font-size:0.68rem;letter-spacing:2px;text-transform:uppercase;
-  color:var(--muted);margin-bottom:10px;font-family:'DM Mono',monospace;
-}
-.section-title{
-  font-size:1.1rem;font-weight:900;margin-bottom:12px;
-  display:flex;align-items:center;gap:8px;
-}
-
-/* ── TOPIC CARDS ── */
-.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:20px}
-.topic-card{
-  background:var(--card);border:1.5px solid var(--border);border-radius:14px;
-  padding:16px 14px;cursor:pointer;transition:all 0.18s;position:relative;overflow:hidden;
-}
-.topic-card.sel{border-color:var(--accent);background:rgba(63,185,80,0.08)}
-.topic-card:hover{transform:translateY(-2px);border-color:var(--accent4)}
-.topic-icon{font-size:1.6rem;margin-bottom:8px}
-.topic-name{font-size:0.82rem;font-weight:800;line-height:1.2}
-.topic-count{font-size:0.7rem;color:var(--muted);margin-top:4px;font-family:'DM Mono',monospace}
-.topic-sub-text{font-size:0.65rem;color:var(--muted);margin-top:6px;line-height:1.3;opacity:0.8}
-.topic-prog{height:3px;background:var(--border);border-radius:2px;margin-top:8px;overflow:hidden}
-.topic-prog-fill{height:100%;background:var(--accent);border-radius:2px;transition:width 0.5s}
-
-/* ── FLASHCARD ── */
-.fc-wrap{perspective:1200px;margin-bottom:16px;cursor:pointer}
-.fc-inner{
-  position:relative;min-height:200px;transform-style:preserve-3d;
-  transition:transform 0.5s cubic-bezier(.4,0,.2,1);
-}
-.fc-inner.flipped{transform:rotateY(180deg)}
-.fc-face{
-  position:absolute;width:100%;min-height:200px;
-  backface-visibility:hidden;background:var(--card);
-  border:1.5px solid var(--border);border-radius:16px;
-  display:flex;align-items:center;justify-content:center;
-  padding:28px 24px;text-align:center;
-}
-.fc-back{transform:rotateY(180deg)}
-.fc-label{font-size:0.68rem;color:var(--accent);font-family:'DM Mono',monospace;letter-spacing:2px;margin-bottom:12px}
-.fc-text{font-size:1.05rem;font-weight:700;line-height:1.45}
-.fc-body{width:100%}
-.fc-hint{font-size:0.78rem;color:var(--muted);text-align:center;margin-bottom:12px}
-.fc-nav{display:flex;gap:10px}
-.fc-nav-btn{
-  flex:1;padding:11px;border-radius:10px;font-weight:800;font-size:0.85rem;
-  background:transparent;transition:all 0.15s;
-}
-.fc-nav-btn.knew{border:1.5px solid var(--accent);color:var(--accent)}
-.fc-nav-btn.knew:hover{background:rgba(63,185,80,0.1)}
-.fc-nav-btn.skip{border:1.5px solid var(--accent2);color:var(--accent2)}
-.fc-nav-btn.skip:hover{background:rgba(248,81,73,0.1)}
-.fc-progress{
-  display:flex;align-items:center;gap:10px;margin-bottom:14px;
-  font-size:0.75rem;color:var(--muted);font-family:'DM Mono',monospace;
-}
-.fc-progress-track{flex:1;height:4px;background:var(--border);border-radius:2px;overflow:hidden}
-.fc-progress-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent4));border-radius:2px;transition:width 0.4s}
-
-/* ── PROGRESS BARS (quiz) ── */
-.q-progress{height:4px;background:var(--border);border-radius:2px;margin-bottom:20px;overflow:hidden}
-.q-progress-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent4));border-radius:2px;transition:width 0.4s}
-
-/* ── RESULTS ── */
-.results-hero{
-  background:var(--card);border:1px solid var(--border);border-radius:16px;
-  padding:28px;text-align:center;margin-bottom:16px;animation:fadeIn 0.4s ease;
-}
-.score-ring{width:130px;height:130px;margin:0 auto 16px;position:relative}
-.score-ring svg{transform:rotate(-90deg)}
-.score-ring-text{
-  position:absolute;inset:0;display:flex;flex-direction:column;
-  align-items:center;justify-content:center;
-}
-.score-big{font-size:2.2rem;font-weight:900;line-height:1}
-.score-lbl{font-size:0.68rem;color:var(--muted);font-family:'DM Mono',monospace;letter-spacing:1px}
-.grade-pill{
-  display:inline-block;font-weight:900;font-size:1.1rem;
-  padding:6px 20px;border-radius:100px;margin-bottom:10px;
-}
-.res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}
-.res-item{background:var(--surface);border-radius:10px;padding:12px;text-align:center;font-family:'DM Mono',monospace}
-.res-val{font-size:1.3rem;font-weight:700}
-.res-key{font-size:0.65rem;color:var(--muted);margin-top:2px;letter-spacing:1px}
-
-/* ── MOCK EXAM ── */
-.exam-hero{
-  background:linear-gradient(135deg,#1a2840,#1e1a2e);
-  border:1px solid var(--border);border-radius:16px;padding:20px;margin-bottom:16px;
-}
-.exam-hero h2{font-size:1.1rem;font-weight:900;margin-bottom:6px}
-.exam-hero p{font-size:0.8rem;color:var(--muted);line-height:1.5}
-.exam-cards{display:grid;gap:12px;margin-bottom:16px}
-.exam-card{
-  background:var(--card);border:1.5px solid var(--border);border-radius:14px;padding:18px;
-  display:flex;align-items:center;gap:14px;cursor:pointer;transition:all 0.18s;
-}
-.exam-card:hover{border-color:var(--accent4);transform:translateY(-1px)}
-.exam-card .ec-icon{font-size:2rem}
-.exam-card .ec-title{font-weight:900;font-size:0.95rem}
-.exam-card .ec-desc{font-size:0.78rem;color:var(--muted);margin-top:2px}
-.exam-timer-bar{
-  background:var(--card);border:1px solid var(--border);border-radius:12px;
-  padding:10px 16px;margin-bottom:14px;
-  display:flex;align-items:center;gap:12px;
-}
-.exam-timer-val{font-family:'DM Mono',monospace;font-size:1.1rem;font-weight:700;color:var(--accent3)}
-.exam-marks{font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted);margin-left:auto}
-
-/* ── FORMULA SHEET ── */
-.formula-section{margin-bottom:20px}
-.formula-section h3{
-  font-size:0.9rem;font-weight:800;color:var(--accent4);
-  margin-bottom:10px;padding-bottom:6px;
-  border-bottom:1px solid var(--border);
-}
-.formula-cards{display:grid;gap:8px}
-.formula-card{
-  background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 14px;
-}
-.formula-name{font-size:0.75rem;color:var(--muted);margin-bottom:4px;font-weight:700}
-.formula-val{font-family:'DM Mono',monospace;font-size:0.88rem;color:var(--text);line-height:1.6}
-
-/* ── LINKS PAGE ── */
-.links-grid{display:grid;gap:10px}
-.link-card{
-  background:var(--card);border:1.5px solid var(--border);border-radius:14px;
-  padding:14px 16px;text-decoration:none;color:var(--text);
-  display:flex;align-items:center;gap:12px;transition:all 0.15s;
-}
-.link-card:hover{border-color:var(--accent4);transform:translateX(4px)}
-.link-icon{font-size:1.6rem;flex-shrink:0}
-.link-title{font-weight:800;font-size:0.9rem}
-.link-desc{font-size:0.75rem;color:var(--muted);margin-top:2px}
-
-/* ── SETTINGS PAGE ── */
-.settings-card{
-  background:var(--card);border:1px solid var(--border);border-radius:14px;
-  padding:16px;margin-bottom:12px;
-}
-.settings-card h3{font-size:0.85rem;font-weight:800;color:var(--accent4);margin-bottom:12px}
-.setting-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
-.setting-label{font-size:0.85rem;flex:1}
-.setting-input{
-  background:var(--surface);border:1.5px solid var(--border);border-radius:8px;
-  padding:6px 10px;color:var(--text);font-family:'Nunito',sans-serif;
-  font-size:0.85rem;outline:none;width:100px;
-}
-.setting-input:focus{border-color:var(--accent4)}
-
-/* ── PROGRESS PAGE ── */
-.prog-stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:16px}
-.prog-stat{
-  background:var(--card);border:1px solid var(--border);border-radius:12px;
-  padding:14px;text-align:center;
-}
-.prog-stat-val{font-size:1.6rem;font-weight:900;color:var(--accent)}
-.prog-stat-key{font-size:0.72rem;color:var(--muted);margin-top:2px;font-family:'DM Mono',monospace}
-.prog-topic-row{
-  display:flex;align-items:center;gap:10px;
-  background:var(--card);border:1px solid var(--border);border-radius:10px;
-  padding:12px 14px;margin-bottom:8px;
-}
-.prog-topic-name{font-size:0.85rem;font-weight:700;flex:1}
-.prog-topic-bar-wrap{flex:2}
-.prog-topic-bar{height:8px;background:var(--border);border-radius:4px;overflow:hidden}
-.prog-topic-fill{height:100%;background:var(--accent);border-radius:4px;transition:width 0.5s}
-.prog-topic-pct{font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--muted);width:36px;text-align:right}
-
-/* ── WORKSHEET styles (inline) ── */
-.ws-section-head{
-  font-size:0.88rem;font-weight:900;color:var(--accent);
-  margin:18px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--border);
-}
-.ws-q{
-  background:var(--card);border:1.5px solid var(--border);border-radius:14px;
-  padding:16px;margin-bottom:12px;transition:border-color 0.2s;
-}
-.ws-q.ok{border-color:var(--accent)}
-.ws-q.bad{border-color:var(--accent2)}
-.ws-qlabel{font-size:0.65rem;font-family:'DM Mono',monospace;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
-.ws-qtext{font-weight:700;font-size:0.93rem;line-height:1.4;margin-bottom:11px}
-.ws-opts2{display:grid;gap:7px}
-.ws-opt2{
-  display:flex;align-items:center;gap:9px;
-  background:var(--surface);border:1.5px solid var(--border);border-radius:9px;
-  padding:9px 13px;cursor:pointer;font-size:0.83rem;font-weight:600;
-  transition:all 0.14s;color:var(--text);
-}
-.ws-opt2:hover:not(:disabled){border-color:var(--accent4)}
-.ws-opt2 .wol{
-  font-family:'DM Mono',monospace;font-size:0.68rem;background:var(--border);
-  border-radius:5px;width:22px;height:22px;display:flex;align-items:center;justify-content:center;flex-shrink:0;
-}
-.ws-opt2.wc{border-color:var(--accent);background:rgba(63,185,80,0.1)}
-.ws-opt2.wc .wol{background:var(--accent);color:#0d1117}
-.ws-opt2.ww{border-color:var(--accent2);background:rgba(248,81,73,0.1)}
-.ws-opt2.ww .wol{background:var(--accent2);color:#fff}
-.ws-opt2:disabled{cursor:default}
-.ws-eq{
-  background:var(--surface);border:1px solid var(--border);border-radius:8px;
-  padding:12px 14px;font-family:'DM Mono',monospace;font-size:0.82rem;
-  line-height:2.4;margin-bottom:10px;
-}
-.eq-in{
-  background:transparent;border:none;border-bottom:2px solid var(--accent4);
-  color:var(--text);font-family:'DM Mono',monospace;font-size:0.82rem;
-  min-width:90px;text-align:center;outline:none;padding:0 4px;
-}
-.eq-in.ec{border-color:var(--accent);color:var(--accent)}
-.eq-in.ew{border-color:var(--accent2);color:var(--accent2)}
-.ws-ta{
-  width:100%;background:var(--surface);border:1.5px solid var(--border);
-  border-radius:9px;padding:10px 13px;color:var(--text);font-size:0.85rem;
-  font-family:'Nunito',sans-serif;outline:none;resize:vertical;min-height:70px;
-  margin-bottom:10px;transition:border-color 0.2s;
-}
-.ws-ta:focus{border-color:var(--accent4)}
-.ws-ta.ec{border-color:var(--accent)}
-.ws-ta.ew{border-color:var(--accent2)}
-.ws-check{
-  background:transparent;border:1.5px solid var(--accent4);color:var(--accent4);
-  border-radius:8px;padding:7px 15px;font-family:'Nunito',sans-serif;
-  font-weight:800;font-size:0.78rem;cursor:pointer;transition:all 0.14s;
-}
-.ws-check:hover{background:rgba(88,166,255,0.1)}
-.ws-check:disabled{opacity:0.4;cursor:default}
-.ws-reveal{
-  margin-top:10px;background:rgba(63,185,80,0.06);border:1px solid rgba(63,185,80,0.2);
-  border-radius:8px;padding:10px 13px;font-size:0.8rem;line-height:1.55;display:none;
-}
-.ws-reveal.show{display:block}
-.ws-reveal strong{color:var(--accent)}
-.pun-tbl{border-collapse:collapse}
-.pun-tbl td,.pun-tbl th{border:1.5px solid var(--border);width:68px;height:48px;text-align:center;vertical-align:middle}
-.pun-tbl th{background:rgba(63,185,80,0.1);color:var(--accent);font-family:'DM Mono',monospace;font-size:0.8rem;font-weight:600}
-.pun-in{background:transparent;border:none;outline:none;text-align:center;font-family:'DM Mono',monospace;font-size:0.85rem;color:var(--text);width:60px;cursor:pointer}
-.pun-cell{background:var(--surface)}
-.pun-cell.pc{background:rgba(63,185,80,0.15);color:var(--accent)}
-.pun-cell.pw{background:rgba(248,81,73,0.12);color:var(--accent2)}
-.ws-score-strip{
-  background:var(--card);border:1px solid var(--border);border-radius:12px;
-  padding:12px 16px;margin-bottom:16px;display:flex;align-items:center;gap:12px;
-}
-.ws-score-num{font-size:1.5rem;font-weight:900;color:var(--accent);font-family:'DM Mono',monospace}
-.ws-score-detail{flex:1}
-.ws-score-msg{font-size:0.78rem;color:var(--muted)}
-.ws-score-track{height:4px;background:var(--border);border-radius:2px;margin-top:6px;overflow:hidden}
-.ws-score-fill{height:100%;background:var(--accent);border-radius:2px;transition:width 0.5s}
-.ws-tab-row{display:flex;gap:6px;margin-bottom:16px;overflow-x:auto;scrollbar-width:none}
-.ws-tab-row::-webkit-scrollbar{display:none}
-.ws-tab{
-  flex-shrink:0;background:var(--card);border:1.5px solid var(--border);border-radius:100px;
-  padding:7px 14px;cursor:pointer;font-weight:800;font-size:0.78rem;color:var(--muted);transition:all 0.15s;
-}
-.ws-tab:hover{color:var(--text)}
-.ws-tab.wta{border-color:var(--accent);color:var(--accent);background:rgba(63,185,80,0.08)}
-.ws-sheet2{display:none}
-.ws-sheet2.wsa{display:block;animation:fadeIn 0.25s ease}
-.ws-action-row{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
-
-/* ── EXAM TIPS ── */
-.tip-card{
-  background:var(--card);border:1px solid var(--border);border-radius:12px;
-  padding:13px 15px;margin-bottom:8px;display:flex;align-items:flex-start;gap:10px;
-}
-.tip-icon{font-size:1.2rem;flex-shrink:0;margin-top:1px}
-.tip-text{font-size:0.82rem;line-height:1.5}
-.tip-text strong{color:var(--accent)}
-
-/* ── RESPONSIVE ── */
-@media(max-width:480px){
-  .res-grid{grid-template-columns:1fr 1fr}
-  .prog-stat-grid{grid-template-columns:1fr 1fr}
-  .topic-grid{grid-template-columns:1fr 1fr}
-}
-</style>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css?v=1">
+<script>
+  // Apply saved appearance before first paint to avoid a flash of the wrong theme
+  try{var _s=JSON.parse(localStorage.getItem('n5art_v3')||'{}').settings||{};if(_s.mode==='light'||_s.mode==='dark')document.documentElement.dataset.theme=_s.mode;if(_s.accent&&_s.accent!=='saltire')document.documentElement.dataset.accent=_s.accent;}catch(e){}
+</script>
 </head>
 <body>
 <div id="n5s-bar" style="background:#1f3b6e;color:#fff;text-align:center;padding:8px 12px;font:600 14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif"><a href="https://nat5scotland.com" style="color:#fff;text-decoration:none">&larr; More free Nat 5 &amp; Higher revision at <u>nat5scotland.com</u></a></div>
 
 
-<!-- XP Toast -->
-<div class="xp-toast" id="xp-toast">+10 XP ⭐</div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-practice" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></symbol>
+  <symbol id="i-topics" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+  <symbol id="i-worksheets" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></symbol>
+  <symbol id="i-flashcards" viewBox="0 0 24 24"><rect x="3" y="7" width="14" height="14" rx="2"/><path d="M7 3h12a2 2 0 0 1 2 2v12"/></symbol>
+  <symbol id="i-mock" viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></symbol>
+  <symbol id="i-timer" viewBox="0 0 24 24"><circle cx="12" cy="14" r="8"/><path d="M12 10v4l2 2M10 2h4"/></symbol>
+  <symbol id="i-skills" viewBox="0 0 24 24"><path d="M4 19.5V5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2.5Z"/><path d="M8 7h6M8 11h6"/></symbol>
+  <symbol id="i-notepad" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></symbol>
+  <symbol id="i-progress" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M8 17v-5M13 17V8M18 17v-7"/></symbol>
+  <symbol id="i-resources" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></symbol>
+  <symbol id="i-settings" viewBox="0 0 24 24"><path d="M4 6h9M17 6h3M4 12h3M11 12h9M4 18h11M19 18h1"/><circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
+  <symbol id="i-more" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="19" cy="12" r="1.2"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 22c4 0 7-2.8 7-6.8 0-4.2-3-6.2-4.2-10.2-1.8 1.6-2.8 3.6-2.8 5.7-1-.8-1.8-2-2-3.7C7.8 9 5 11.6 5 15.2 5 19.2 8 22 12 22z"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.3h6c0-1 .4-1.8 1-2.3A7 7 0 0 0 12 2z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5M11 18l-6-6 6-6"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 3v12M8 7l4-4 4 4"/><path d="M6 11H5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1h-1"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+</svg>
 
-<!-- TOP BAR -->
-<div class="topbar">
-  <div class="topbar-logo">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Nat 5 <span>Art &amp;</span></div>
-  <div class="xp-pill">⭐ <span class="xp-val" id="xp-val">0</span> XP</div>
-  <div class="streak-pill"><span class="fire">🔥</span><span id="streak-val">0</span></div>
-  <div class="lv-badge" id="lv-badge">Lv 1</div>
-</div>
+<a class="skip-link" href="#main">Skip to content</a>
 
-<!-- NAV TABS -->
-<div class="nav-scroll">
-  <button class="nav-btn active" onclick="nav('practice')" data-page="practice"><span class="nb-icon">📚</span> Practice</button>
-  <button class="nav-btn" onclick="nav('flashcards')" data-page="flashcards"><span class="nb-icon">🃏</span> Flashcards</button>
-  <button class="nav-btn" onclick="nav('worksheet')" data-page="worksheet"><span class="nb-icon">📝</span> Worksheets</button>
-  <button class="nav-btn" onclick="nav('mock')" data-page="mock"><span class="nb-icon">📋</span> Mock Exam</button>
-  <button class="nav-btn" onclick="nav('topics')" data-page="topics"><span class="nb-icon">🗂</span> Topics</button>
-  <button class="nav-btn" onclick="nav('formulas')" data-page="formulas"><span class="nb-icon">🔬</span> Key Facts</button>
-  <button class="nav-btn" onclick="nav('progress')" data-page="progress"><span class="nb-icon">📊</span> Progress</button>
-  <button class="nav-btn" onclick="nav('links')" data-page="links"><span class="nb-icon">🔗</span> Links</button>
-  <button class="nav-btn" onclick="nav('settings')" data-page="settings"><span class="nb-icon">⚙️</span> Settings</button>
-</div>
+<div class="shell">
 
-<!-- ═══════════════ PRACTICE PAGE ═══════════════ -->
-<div class="page active" id="page-practice">
-  <div class="hero">
-    <h1>🏴󠁧󠁢󠁳󠁣󠁴󠁿 Nat 5 <span>Art &amp;</span><br>Scotland</h1>
-    <p>SQA-verified · 95 questions · 5 topics · earn XP as you go!</p>
-  </div>
-
-  <div class="goal-bar" id="goal-bar">
-    <span style="font-size:1.1rem">🎯</span>
-    <div class="goal-bar-track"><div class="goal-bar-fill" id="goal-fill" style="width:0%"></div></div>
-    <div class="goal-label">Daily Goal <span class="goal-val" id="goal-txt">0/10</span></div>
-  </div>
-
-  <div class="section-label">Choose topic & mode</div>
-  <div class="selector-row">
-    <select class="selector" id="topic-sel">
-      <option value="all">🎲 Random Mix</option>
-      <option value="expressive">🎨 Expressive Art Studies</option>
-      <option value="design">✏️ Design Studies</option>
-      <option value="vocab">📖 Art &amp; Design Vocabulary</option>
-      <option value="influences">🌍 Influences on Artists</option>
-      <option value="portfolio">📁 Portfolios &amp; Process</option>
-    </select>
-    <select class="selector" id="type-sel">
-      <option value="all">All Types</option>
-      <option value="mcq">Multiple Choice</option>
-      <option value="fillin">Fill in Blank</option>
-    </select>
-  </div>
-
-  <div id="q-progress-wrap">
-    <div class="q-progress"><div class="q-progress-fill" id="q-progress-fill" style="width:0%"></div></div>
-  </div>
-
-  <div id="question-area">
-    <div class="q-card">
-      <div style="text-align:center;color:var(--muted);padding:20px">
-        <div style="font-size:2rem;margin-bottom:10px">🔬</div>
-        Press New Question to start!
+  <!-- Sidebar (desktop) -->
+  <aside class="sidebar" aria-label="Main navigation">
+    <a class="brand" href="#practice" data-nav="practice">
+      <span class="brand-mark" aria-hidden="true">A</span>
+      <span>
+        <h1 class="brand-name">Nat 5 Art &amp; Design <span>Scotland</span></h1>
+        <span class="brand-sub">SQA National 5 revision</span>
+      </span>
+    </a>
+    <nav class="side-nav">
+      <div class="nav-group">
+        <div class="nav-label">Learn</div>
+        <a href="#practice" data-nav="practice"><svg class="ico"><use href="#i-practice"/></svg>Practice</a>
+        <a href="#topics" data-nav="topics"><svg class="ico"><use href="#i-topics"/></svg>Topics</a>
+        <a href="#worksheets" data-nav="worksheets"><svg class="ico"><use href="#i-worksheets"/></svg>Worksheets</a>
+        <a href="#flashcards" data-nav="flashcards"><svg class="ico"><use href="#i-flashcards"/></svg>Flashcards</a>
       </div>
-    </div>
-  </div>
+      <div class="nav-group">
+        <div class="nav-label">Test yourself</div>
+        <a href="#mock" data-nav="mock"><svg class="ico"><use href="#i-mock"/></svg>Mock exams</a>
+        <a href="#timer" data-nav="timer"><svg class="ico"><use href="#i-timer"/></svg>Timed challenge</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-label">Revise</div>
+        <a href="#facts" data-nav="facts"><svg class="ico"><use href="#i-skills"/></svg>Key facts</a>
+        <a href="#notepad" data-nav="notepad"><svg class="ico"><use href="#i-notepad"/></svg>Notepad</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-label">You</div>
+        <a href="#progress" data-nav="progress"><svg class="ico"><use href="#i-progress"/></svg>Progress</a>
+        <a href="#resources" data-nav="resources"><svg class="ico"><use href="#i-resources"/></svg>Links &amp; tips</a>
+        <a href="#settings" data-nav="settings"><svg class="ico"><use href="#i-settings"/></svg>Settings</a>
+      </div>
+    </nav>
+  </aside>
 
-  <div class="btn-row" style="margin-top:0">
-    <button class="btn btn-green" onclick="newQuestion()">⟳ New Question</button>
-    <button class="btn btn-ghost" onclick="nav('mock')">📋 Mock Exam</button>
-  </div>
-</div>
-
-<!-- ═══════════════ FLASHCARDS PAGE ═══════════════ -->
-<div class="page" id="page-flashcards">
-  <div class="section-title">🃏 Flashcards</div>
-
-  <div class="selector-row" style="margin-bottom:12px">
-    <select class="selector" id="fc-topic-sel">
-      <option value="all">All Topics</option>
-      <option value="expressive">🎨 Expressive Art Studies</option>
-      <option value="design">✏️ Design Studies</option>
-      <option value="vocab">📖 Art &amp; Design Vocabulary</option>
-      <option value="influences">🌍 Influences on Artists</option>
-      <option value="portfolio">📁 Portfolios &amp; Process</option>
-    </select>
-    <button class="btn btn-blue" onclick="startFlashcards()" style="flex:0;padding:8px 16px;border-radius:10px;font-size:0.82rem">▶ Start</button>
-  </div>
-
-  <div class="fc-progress">
-    <span id="fc-prog-txt">0 / 0</span>
-    <div class="fc-progress-track"><div class="fc-progress-fill" id="fc-prog-fill" style="width:0%"></div></div>
-    <span style="color:var(--accent)">✓ <span id="fc-knew-txt">0</span></span>
-  </div>
-
-  <div class="fc-hint" id="fc-hint">👆 Tap the card to flip it</div>
-
-  <div class="fc-wrap" onclick="flipCard()" id="fc-wrap">
-    <div class="fc-inner" id="fc-inner">
-      <div class="fc-face fc-front">
-        <div class="fc-body">
-          <div class="fc-label">QUESTION</div>
-          <div class="fc-text" id="fc-front-text">Select a topic and press Start to begin</div>
+  <div class="main-col">
+    <!-- Top bar -->
+    <header class="topbar">
+      <a class="brand brand-compact" href="#practice" data-nav="practice" aria-hidden="true" tabindex="-1">
+        <span class="brand-mark">A</span><span class="brand-name">Nat 5 Art &amp; Design</span>
+      </a>
+      <div class="page-title" id="page-title">Practice</div>
+      <div class="stat-chips">
+        <div class="chip" title="Days in a row you've practised">
+          <svg class="ico ico-flame"><use href="#i-flame"/></svg>
+          <span><b id="hdr-days">0</b> <span class="chip-label">day streak</span></span>
+        </div>
+        <div class="chip chip-goal" title="Today's goal">
+          <svg class="ring" viewBox="0 0 36 36" aria-hidden="true"><circle class="ring-bg" cx="18" cy="18" r="15"/><circle class="ring-fg" id="goal-ring" cx="18" cy="18" r="15" pathLength="100" stroke-dasharray="0 100"/></svg>
+          <span><b id="hdr-daily">0</b>/<span id="hdr-goal">10</span> <span class="chip-label">today</span></span>
         </div>
       </div>
-      <div class="fc-face fc-back">
-        <div class="fc-body">
-          <div class="fc-label" style="color:var(--accent4)">ANSWER</div>
-          <div class="fc-text" id="fc-back-text" style="font-size:0.92rem;font-weight:600;color:var(--text)">—</div>
+    </header>
+
+    <main id="main" tabindex="-1">
+
+      <!-- PRACTICE -->
+      <section class="panel" id="panel-practice" data-title="Practice">
+        <div class="greeting" id="greeting" hidden></div>
+        <div class="toolbar">
+          <label class="field">
+            <span class="field-label">Topic</span>
+            <select id="topic-select"></select>
+          </label>
+          <div class="field">
+            <span class="field-label" id="type-label">Question type</span>
+            <div class="segmented" role="radiogroup" aria-labelledby="type-label" id="type-seg">
+              <button role="radio" data-type="all" aria-checked="true">All types</button>
+              <button role="radio" data-type="mcq" aria-checked="false">Multiple choice</button>
+              <button role="radio" data-type="fillin" aria-checked="false">Fill in the blank</button>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="fc-nav">
-    <button class="fc-nav-btn skip" onclick="fcNext(false)">✕ Didn't know</button>
-    <button class="fc-nav-btn knew" onclick="fcNext(true)">✓ Got it!</button>
-  </div>
-</div>
+        <div class="practice-grid">
+          <article class="card q-card" aria-live="polite">
+            <div class="q-meta">
+              <span class="tag tag-topic" id="q-topic-label">Topic</span>
+              <span class="tag tag-type" id="q-type">Multiple choice</span>
+              <span class="q-num">Question <span id="q-num">1</span></span>
+            </div>
+            <div class="q-text" id="q-text">Loading…</div>
+            <div class="opts" id="q-options" role="group" aria-label="Answers"></div>
+            <div class="btn-row">
+              <button type="button" class="btn btn-ghost" id="hint-btn"><svg class="ico"><use href="#i-bulb"/></svg>50:50</button>
+              <button type="button" class="btn btn-ghost" id="skip-btn">Skip</button>
+            </div>
+            <div id="feedback-area"></div>
+          </article>
 
-<!-- ═══════════════ WORKSHEET PAGE ═══════════════ -->
-<div class="page" id="page-worksheet">
-  <div class="section-title">📝 Interactive Worksheets</div>
-  <p style="font-size:0.8rem;color:var(--muted);margin-bottom:14px">SQA-style written questions · instant feedback · self-marked</p>
-
-  <div id="ws-score-strip" class="ws-score-strip" style="display:none">
-    <div class="ws-score-num" id="ws-score-num">0/0</div>
-    <div class="ws-score-detail">
-      <div class="ws-score-msg" id="ws-score-msg">Answer questions to see your score</div>
-      <div class="ws-score-track"><div class="ws-score-fill" id="ws-score-fill2" style="width:0%"></div></div>
-    </div>
-  </div>
-
-  <div class="ws-tab-row">
-    <button class="ws-tab wta" onclick="wsSwitchSheet(0)">🎨 Expressive Art</button>
-    <button class="ws-tab" onclick="wsSwitchSheet(1)">✏️ Design</button>
-    <button class="ws-tab" onclick="wsSwitchSheet(2)">🌍 Influences</button>
-  </div>
-
-  <!-- SHEET 0: Expressive Art Studies -->
-  <div class="ws-sheet2 wsa" id="wss-0">
-    <div style="background:rgba(88,166,255,0.07);border:1px solid rgba(88,166,255,0.2);border-radius:10px;padding:11px 14px;margin-bottom:14px;font-size:0.78rem;color:var(--accent4);line-height:1.5">
-      <strong>SQA Key Areas:</strong> Visual elements · Composition · Colour · Media &amp; techniques · Mood &amp; atmosphere · Tonal contrast · Exam technique
-    </div>
-    <div class="ws-section-head">Section A — Visual Elements</div>
-
-    <div class="ws-q" id="wq-ea1" data-done="0">
-      <div class="ws-qlabel">Q1 · Exam Technique</div>
-      <div class="ws-qtext">A student writes: "The painting has dark colours and the figures are small." Will this gain a mark in the SQA exam?</div>
-      <div class="ws-opts2">
-        <div class="ws-opt2" onclick="wsMCQ('wq-ea1',this,false)"><span class="wol">A</span>Yes — it correctly identifies two visual elements</div>
-        <div class="ws-opt2" onclick="wsMCQ('wq-ea1',this,true)"><span class="wol">B</span>No — it is purely descriptive and does not justify the effect of these elements</div>
-        <div class="ws-opt2" onclick="wsMCQ('wq-ea1',this,false)"><span class="wol">C</span>Yes — as long as the statement is correct it will always gain marks</div>
-        <div class="ws-opt2" onclick="wsMCQ('wq-ea1',this,false)"><span class="wol">D</span>Yes — it mentions two separate points so gets 2 marks</div>
-      </div>
-      <div class="ws-reveal" id="wq-ea1-r"><strong>B — No, purely descriptive responses do NOT gain marks.</strong> SQA marking principle: marks require JUSTIFIED responses, not description. The student must explain the EFFECT: e.g. "The dark colours create an oppressive, threatening atmosphere, reinforcing the sense of danger in the scene."</div>
-    </div>
-
-    <div class="ws-q" id="wq-ea2" data-done="0">
-      <div class="ws-qlabel">Q2 · Multiple Choice</div>
-      <div class="ws-qtext">Which of the following responses about COLOUR would gain a mark in the SQA exam?</div>
-      <div class="ws-opts2">
-        <div class="ws-opt2" onclick="wsMCQ('wq-ea2',this,false)"><span class="wol">A</span>"The painting uses blue and green colours."</div>
-        <div class="ws-opt2" onclick="wsMCQ('wq-ea2',this,false)"><span class="wol">B</span>"There is a lot of colour in this picture."</div>
-        <div class="ws-opt2" onclick="wsMCQ('wq-ea2',this,true)"><span class="wol">C</span>"Cool blue and green tones are used throughout, which create a calm, peaceful atmosphere and suggest the chill of the early morning light."</div>
-        <div class="ws-opt2" onclick="wsMCQ('wq-ea2',this,false)"><span class="wol">D</span>"The colours are nice and make the painting look good."</div>
-      </div>
-      <div class="ws-reveal" id="wq-ea2-r"><strong>C — this is the only justified response.</strong> It: (1) identifies the specific colours, (2) names the type (cool tones), and (3) explains the EFFECT on mood. A, B, and D are all descriptive or vague — they identify colour without explaining its significance or effect.</div>
-    </div>
-
-    <div class="ws-q" id="wq-ea3" data-done="0">
-      <div class="ws-qlabel">Q3 · Fill in the Blanks — Visual Elements</div>
-      <div class="ws-qtext">Complete the descriptions of key visual elements:</div>
-      <div class="ws-eq">
-        <input class="eq-in" id="eqea3a" placeholder="??????"> refers to the lightness or darkness of a colour, from highlight to shadow.<br>
-        <input class="eq-in" id="eqea3b" placeholder="?????????"> is the arrangement of elements within an artwork to create structure and lead the eye.<br>
-        <input class="eq-in" id="eqea3c" placeholder="???????"> describes how materials have been applied — e.g. thick impasto or fine detail.
-      </div>
-      <button class="ws-check" onclick="wsEq('wq-ea3',['eqea3a','eqea3b','eqea3c'],['tone','composition','media handling'])">Check</button>
-      <div class="ws-reveal" id="wq-ea3-r"><strong>Tone</strong> = lightness/darkness. <strong>Composition</strong> = arrangement of elements. <strong>Media handling</strong> (or techniques) = how materials have been applied and their effect.</div>
-    </div>
-
-    <div class="ws-q" id="wq-ea4" data-done="0">
-      <div class="ws-qlabel">Q4 · Short Answer (4 marks)</div>
-      <div class="ws-qtext">Referring to an artist you have studied, identify TWO influences on their work and describe how each influence can be seen in any of their artworks. (4 marks — 1 mark per influence identified, 1 mark per description)</div>
-      <textarea class="ws-ta" id="wq-ea4-ta" placeholder="Influence 1: [Name specific influence]&#10;How it can be seen: [Describe effect on the work]&#10;&#10;Influence 2: [Name specific influence]&#10;How it can be seen: [Describe effect on the work]"></textarea>
-      <button class="ws-check" onclick="wsReveal('wq-ea4')">Show Model Answer</button>
-      <div class="ws-reveal" id="wq-ea4-r"><strong>Model answer structure (example using Peploe):</strong><br>
-      Influence 1: <strong>Fauvism / French Post-Impressionism</strong> (specific — 1 mark)<br>
-      How seen: <strong>"This influenced Peploe to use bold, non-naturalistic colour in his still life paintings, such as the vibrant reds and oranges in his paintings of roses, which are used for expressive effect rather than to accurately represent reality."</strong> (1 mark)<br><br>
-      Influence 2: <strong>Cézanne\'s approach to structure and form</strong> (specific — 1 mark)<br>
-      How seen: <strong>"Peploe adopted Cézanne\'s approach of using colour to build up form, visible in the way he uses planes of colour to suggest the rounded volume of fruit in his still life compositions."</strong> (1 mark)<br><br>
-      Note: "influenced by French artists" is NOT specific enough — you must name the movement/artist.</div>
-    </div>
-
-    <div class="ws-q" id="wq-ea5" data-done="0">
-      <div class="ws-qlabel">Q5 · Multiple Choice</div>
-      <div class="ws-qtext">WARM colours in colour theory are associated with which qualities?</div>
-      <div class="ws-opts2">
-        <div class="ws-opt2" onclick="wsMCQ('wq-ea5',this,false)"><span class="wol">A</span>Blues, greens, and purples — associated with calm and cold</div>
-        <div class="ws-opt2" onclick="wsMCQ('wq-ea5',this,true)"><span class="wol">B</span>Reds, oranges, and yellows — appear to advance, create energy and warmth</div>
-        <div class="ws-opt2" onclick="wsMCQ('wq-ea5',this,false)"><span class="wol">C</span>Blacks, whites, and greys — neutral tones</div>
-        <div class="ws-opt2" onclick="wsMCQ('wq-ea5',this,false)"><span class="wol">D</span>All bright colours regardless of hue</div>
-      </div>
-      <div class="ws-reveal" id="wq-ea5-r"><strong>B — reds, oranges, and yellows.</strong> Warm colours appear to advance in a composition and are associated with warmth, energy, fire, and passion. Cool colours (blues, greens, purples) recede and feel calm or cold. This warm/cool contrast can create depth, mood, and visual interest in an artwork.</div>
-    </div>
-
-    <div class="ws-action-row">
-      <button class="btn btn-green" onclick="wsMarkAll(0)" style="flex:1">Mark All</button>
-      <button class="btn btn-ghost" onclick="wsReset2(0)" style="flex:1">Reset</button>
-    </div>
-  </div>
-
-  <!-- SHEET 1: Design Studies -->
-  <div class="ws-sheet2" id="wss-1">
-    <div style="background:rgba(88,166,255,0.07);border:1px solid rgba(88,166,255,0.2);border-radius:10px;padding:11px 14px;margin-bottom:14px;font-size:0.78rem;color:var(--accent4);line-height:1.5">
-      <strong>SQA Key Areas:</strong> Function · Fitness for purpose · Target market · Visual impact · Style · Materials &amp; techniques · Layout · Typography
-    </div>
-    <div class="ws-section-head">Section A — Design Issues</div>
-
-    <div class="ws-q" id="wq-ds1" data-done="0">
-      <div class="ws-qlabel">Q1 · Multiple Choice</div>
-      <div class="ws-qtext">A poster has bold typography, high-contrast colours, and a large striking image. Which design issue does this BEST demonstrate?</div>
-      <div class="ws-opts2">
-        <div class="ws-opt2" onclick="wsMCQ('wq-ds1',this,false)"><span class="wol">A</span>Function — it works as intended</div>
-        <div class="ws-opt2" onclick="wsMCQ('wq-ds1',this,true)"><span class="wol">B</span>Visual impact — it immediately grabs the viewer\'s attention</div>
-        <div class="ws-opt2" onclick="wsMCQ('wq-ds1',this,false)"><span class="wol">C</span>Fitness for purpose — it fulfils its brief</div>
-        <div class="ws-opt2" onclick="wsMCQ('wq-ds1',this,false)"><span class="wol">D</span>Materials and techniques — it uses specific production methods</div>
-      </div>
-      <div class="ws-reveal" id="wq-ds1-r"><strong>B — Visual impact.</strong> Visual impact is the immediate, powerful impression a design makes — how strongly it grabs attention. Bold typography, high contrast, and striking imagery all contribute to strong visual impact. Particularly important in advertising and communication design where you have only seconds to attract attention.</div>
-    </div>
-
-    <div class="ws-q" id="wq-ds2" data-done="0">
-      <div class="ws-qlabel">Q2 · Short Answer (2 marks)</div>
-      <div class="ws-qtext">Explain what is meant by TARGET MARKET in design and explain why it is important. (2 marks)</div>
-      <textarea class="ws-ta" id="wq-ds2-ta" placeholder="Definition of target market:&#10;Why it is important:"></textarea>
-      <button class="ws-check" onclick="wsReveal('wq-ds2')">Show Model Answer</button>
-      <div class="ws-reveal" id="wq-ds2-r"><strong>Model answer:</strong><br>
-      Target market = <strong>the specific group of people the design is aimed at</strong> — defined by factors such as age, gender, lifestyle, interests, and income level. (1 mark)<br>
-      Important because: <strong>all design decisions (aesthetics, materials, scale, price, communication approach) must be appropriate for this audience</strong> — a design that does not suit its target market will fail commercially. (1 mark)</div>
-    </div>
-
-    <div class="ws-q" id="wq-ds3" data-done="0">
-      <div class="ws-qlabel">Q3 · Fill in the Blanks — Design Issues</div>
-      <div class="ws-eq">
-        <input class="eq-in" id="eqds3a" placeholder="????????"> refers to WHAT the product is designed to do — its intended purpose.<br>
-        <input class="eq-in" id="eqds3b" placeholder="??????? ??? ???????"> means the design successfully fulfils its function for its intended users in its intended context.<br>
-        The way text, images and space are organised in a design to guide the viewer is called <input class="eq-in" id="eqds3c" placeholder="??????">.
-      </div>
-      <button class="ws-check" onclick="wsEq('wq-ds3',['eqds3a','eqds3b','eqds3c'],['function','fitness for purpose','layout'])">Check</button>
-      <div class="ws-reveal" id="wq-ds3-r"><strong>Function</strong> = what it does. <strong>Fitness for purpose</strong> = successfully achieves its function for its users. <strong>Layout</strong> = organisation of elements to guide the viewer and communicate the message.</div>
-    </div>
-
-    <div class="ws-q" id="wq-ds4" data-done="0">
-      <div class="ws-qlabel">Q4 · Multiple Choice</div>
-      <div class="ws-qtext">Which design area would you MOST likely discuss when analysing a shopping bag, cereal box, or company logo?</div>
-      <div class="ws-opts2">
-        <div class="ws-opt2" onclick="wsMCQ('wq-ds4',this,true)"><span class="wol">A</span>Graphic/communication design</div>
-        <div class="ws-opt2" onclick="wsMCQ('wq-ds4',this,false)"><span class="wol">B</span>Architectural design</div>
-        <div class="ws-opt2" onclick="wsMCQ('wq-ds4',this,false)"><span class="wol">C</span>Jewellery design</div>
-        <div class="ws-opt2" onclick="wsMCQ('wq-ds4',this,false)"><span class="wol">D</span>Interior design</div>
-      </div>
-      <div class="ws-reveal" id="wq-ds4-r"><strong>A — Graphic/communication design.</strong> This includes: logos, posters, packaging, advertising, book covers, websites, and signage. Key design issues: visual communication, typography, colour, layout, imagery, and how effectively it communicates to the target audience.</div>
-    </div>
-
-    <div class="ws-action-row">
-      <button class="btn btn-green" onclick="wsMarkAll(1)" style="flex:1">Mark All</button>
-      <button class="btn btn-ghost" onclick="wsReset2(1)" style="flex:1">Reset</button>
-    </div>
-  </div>
-
-  <!-- SHEET 2: Art Movements & Influences -->
-  <div class="ws-sheet2" id="wss-2">
-    <div style="background:rgba(88,166,255,0.07);border:1px solid rgba(88,166,255,0.2);border-radius:10px;padding:11px 14px;margin-bottom:14px;font-size:0.78rem;color:var(--accent4);line-height:1.5">
-      <strong>SQA Key Areas:</strong> Social, cultural &amp; other influences · Art movements · Specific artists &amp; designers · How influences affect practice
-    </div>
-    <div class="ws-section-head">Section A — Art Movements</div>
-
-    <div class="ws-q" id="wq-inf1" data-done="0">
-      <div class="ws-qlabel">Q1 · Multiple Choice</div>
-      <div class="ws-qtext">The IMPRESSIONIST movement (c.1860s–1880s) was significantly influenced by the invention of collapsible metal paint tubes. Why?</div>
-      <div class="ws-opts2">
-        <div class="ws-opt2" onclick="wsMCQ('wq-inf1',this,false)"><span class="wol">A</span>It allowed artists to use metallic colours for the first time</div>
-        <div class="ws-opt2" onclick="wsMCQ('wq-inf1',this,true)"><span class="wol">B</span>Artists could now paint outdoors (en plein air), directly observing natural light — instead of being tied to the studio</div>
-        <div class="ws-opt2" onclick="wsMCQ('wq-inf1',this,false)"><span class="wol">C</span>It made paint cheaper so more people could become artists</div>
-        <div class="ws-opt2" onclick="wsMCQ('wq-inf1',this,false)"><span class="wol">D</span>It allowed paint to be applied more thickly in impasto technique</div>
-      </div>
-      <div class="ws-reveal" id="wq-inf1-r"><strong>B — en plein air painting.</strong> Before portable paint tubes, artists mixed paint in pots and had to work in studios. Collapsible metal tubes (invented 1841) let artists take paint outdoors. This technological influence directly enabled Impressionism's core practice of capturing changing natural light directly from observation.</div>
-    </div>
-
-    <div class="ws-q" id="wq-inf2" data-done="0">
-      <div class="ws-qlabel">Q2 · Multiple Choice</div>
-      <div class="ws-qtext">POP ART (1950s–60s) was influenced by which social and cultural developments?</div>
-      <div class="ws-opts2">
-        <div class="ws-opt2" onclick="wsMCQ('wq-inf2',this,false)"><span class="wol">A</span>Medieval religious iconography and church architecture</div>
-        <div class="ws-opt2" onclick="wsMCQ('wq-inf2',this,true)"><span class="wol">B</span>Post-war consumer culture, mass media, advertising, television, and popular culture</div>
-        <div class="ws-opt2" onclick="wsMCQ('wq-inf2',this,false)"><span class="wol">C</span>Japanese woodblock printing and Eastern art traditions</div>
-        <div class="ws-opt2" onclick="wsMCQ('wq-inf2',this,false)"><span class="wol">D</span>Renaissance techniques and classical Greek sculpture</div>
-      </div>
-      <div class="ws-reveal" id="wq-inf2-r"><strong>B — consumer culture and mass media.</strong> Pop Art emerged in 1950s Britain and 1960s USA, directly responding to post-war consumerism, mass production, advertising, television, and celebrity culture. Artists like Warhol and Lichtenstein incorporated commercial imagery (soup cans, comic strips, advertising techniques) into fine art.</div>
-    </div>
-
-    <div class="ws-q" id="wq-inf3" data-done="0">
-      <div class="ws-qlabel">Q3 · Short Answer (3 marks)</div>
-      <div class="ws-qtext">Name THREE different types of influence (from the SQA list) that can affect an artist or designer\'s work, and give a brief example of each.</div>
-      <textarea class="ws-ta" id="wq-inf3-ta" placeholder="Influence type 1 + example:&#10;Influence type 2 + example:&#10;Influence type 3 + example:"></textarea>
-      <button class="ws-check" onclick="wsReveal('wq-inf3')">Show Model Answer</button>
-      <div class="ws-reveal" id="wq-inf3-r"><strong>Model answer (1 mark each, any 3 from SQA list):</strong><br>
-      • <strong>Other artists/art movements</strong>: e.g. the Colourists were influenced by Fauvism, leading to their bold use of non-naturalistic colour. (1)<br>
-      • <strong>National/world events</strong>: e.g. Picasso created Guernica in response to the bombing of a Basque town during the Spanish Civil War. (1)<br>
-      • <strong>Personal circumstances</strong>: e.g. Frida Kahlo\'s physical injuries from a bus accident became the central theme of her self-portraits. (1)<br>
-      • <strong>Technology</strong>: e.g. digital tools allow graphic designers to create complex layouts and illustrations more efficiently than by hand. (1)</div>
-    </div>
-
-    <div class="ws-q" id="wq-inf4" data-done="0">
-      <div class="ws-qlabel">Q4 · Multiple Choice</div>
-      <div class="ws-qtext">The BAUHAUS school (Germany 1919–1933) was influential in design because it:</div>
-      <div class="ws-opts2">
-        <div class="ws-opt2" onclick="wsMCQ('wq-inf4',this,false)"><span class="wol">A</span>Revived historical ornamental decoration</div>
-        <div class="ws-opt2" onclick="wsMCQ('wq-inf4',this,true)"><span class="wol">B</span>Combined art, craft, and industrial design under "form follows function" — influencing modern design worldwide</div>
-        <div class="ws-opt2" onclick="wsMCQ('wq-inf4',this,false)"><span class="wol">C</span>Founded the Impressionist movement</div>
-        <div class="ws-opt2" onclick="wsMCQ('wq-inf4',this,false)"><span class="wol">D</span>Introduced Pop Art to Germany</div>
-      </div>
-      <div class="ws-reveal" id="wq-inf4-r"><strong>B — form follows function.</strong> Bauhaus (founded 1919 by Walter Gropius) united fine art, craft, and industrial design. Its principle "form follows function" — design should be determined by purpose, not decoration — profoundly influenced modern graphic design, architecture, typography, and product design worldwide.</div>
-    </div>
-
-    <div class="ws-action-row">
-      <button class="btn btn-green" onclick="wsMarkAll(2)" style="flex:1">Mark All</button>
-      <button class="btn btn-ghost" onclick="wsReset2(2)" style="flex:1">Reset</button>
-    </div>
-  </div>
-
-</div>
-
-<!-- ═══════════════ MOCK EXAM PAGE
-
-<!-- ═══════════════ MOCK EXAM PAGE ═══════════════ -->
-<div class="page" id="page-mock">
-  <div id="mock-home">
-    <div class="exam-hero">
-      <h2>📋 Mock Exam — Nat 5 Biology</h2>
-      <p>Based on the SQA curriculum. Two sittings just like the real exam.<br><strong>Paper 1:</strong> Short answers · 25 marks · 30 min &nbsp;|&nbsp; <strong>Paper 2:</strong> Extended · 25 marks · 40 min</p>
-    </div>
-    <div class="exam-cards">
-      <div class="exam-card" onclick="startMock('paper1')">
-        <div class="ec-icon">📄</div>
-        <div><div class="ec-title">Paper 1 — Mixed Questions</div><div class="ec-desc">25 questions · 30 minutes · all units</div></div>
-      </div>
-      <div class="exam-card" onclick="startMock('paper2')">
-        <div class="ec-icon">📝</div>
-        <div><div class="ec-title">Paper 2 — Mixed Questions</div><div class="ec-desc">25 questions · 40 minutes · all units</div></div>
-      </div>
-    </div>
-    <div class="section-title" style="margin-top:8px">📋 Exam Tips</div>
-    <div class="tip-card"><div class="tip-icon">🎨</div><div class="tip-text"><strong>Never just DESCRIBE — always JUSTIFY.</strong> "The painting uses dark colours" = 0 marks. "The dark, sombre colours create a heavy, oppressive mood, reinforcing the sense of grief in the scene" = 1 mark. Always explain the EFFECT of the visual element.</div></div>
-    <div class="tip-card"><div class="tip-icon">🔬</div><div class="tip-text"><strong>Learn the equations</strong> — key art vocabulary, visual elements, design issues, and influences are common exam questions.</div></div>
-    <div class="tip-card"><div class="tip-icon">📊</div><div class="tip-text"><strong>Show your reasoning</strong> — for 2-mark questions, give two separate points. Watch for command words: "describe", "explain", "state".</div></div>
-    <div class="tip-card"><div class="tip-icon">🧬</div><div class="tip-text"><strong>Genetics questions</strong> — always show your Punnett square working. State the genotype AND phenotype ratio in your answer.</div></div>
-    <div class="tip-card"><div class="tip-icon">⏱</div><div class="tip-text"><strong>Manage your time</strong> — if stuck, move on and come back. Never leave a blank — an attempt may get a mark.</div></div>
-  </div>
-  <div id="mock-exam" style="display:none">
-    <div class="exam-timer-bar">
-      <span style="font-size:1rem">⏱</span>
-      <span class="exam-timer-val" id="mock-timer">30:00</span>
-      <span style="font-size:0.78rem;color:var(--muted)" id="mock-paper-label">Paper 1</span>
-      <span class="exam-marks">Score: <span id="mock-score-live">0</span> / <span id="mock-total-live">25</span></span>
-    </div>
-    <div class="q-progress"><div class="q-progress-fill" id="mock-progress-fill" style="width:0%"></div></div>
-    <div id="mock-q-area"></div>
-    <div class="btn-row">
-      <button class="btn btn-green" id="mock-submit-btn" onclick="mockSubmit()">Submit Answer ✓</button>
-      <button class="btn btn-ghost" onclick="mockSkip()">Skip →</button>
-      <button class="btn btn-red" onclick="mockEnd()">End Exam</button>
-    </div>
-  </div>
-  <div id="mock-results" style="display:none">
-    <div class="results-hero">
-      <div class="score-ring">
-        <svg width="130" height="130" viewBox="0 0 130 130">
-          <circle cx="65" cy="65" r="54" fill="none" stroke="#30363d" stroke-width="10"/>
-          <circle id="mock-ring" cx="65" cy="65" r="54" fill="none" stroke="#3fb950" stroke-width="10" stroke-linecap="round" stroke-dasharray="339" stroke-dashoffset="339"/>
-        </svg>
-        <div class="score-ring-text">
-          <div class="score-big" id="mock-pct">0%</div>
-          <div class="score-lbl">SCORE</div>
+          <aside class="card side-card">
+            <div class="side-stat">
+              <div class="side-num" id="run-streak">0</div>
+              <div class="side-lbl">correct in a row <span class="muted">· best <span id="best-streak">0</span></span></div>
+            </div>
+            <div class="goal">
+              <div class="goal-head"><span>Today's goal</span><span><b id="daily-count">0</b> / <span id="daily-goal-lbl">10</span></span></div>
+              <div class="bar"><div class="bar-fill" id="goal-fill"></div></div>
+            </div>
+            <p class="side-tip"><b>Tip:</b> choose <em>Smart Mix</em> to get more questions on the topics you find hardest.</p>
+            <details class="howto">
+              <summary>How it works</summary>
+              <ul>
+                <li>64 SQA-style questions across every topic</li>
+                <li>Tap an answer, or press <code>1</code>–<code>4</code></li>
+                <li><b>50:50</b> removes two wrong answers</li>
+                <li>Fill in the blank: type the missing word and press <code>Enter</code></li>
+                <li>Read the explanation, then press <code>Enter</code> for the next question</li>
+              </ul>
+            </details>
+          </aside>
         </div>
+      </section>
+
+      <!-- TOPICS -->
+      <section class="panel" id="panel-topics" data-title="Topics" hidden>
+        <p class="lede">Tap a topic to practise it directly. Your accuracy on each topic is shown below.</p>
+        <div id="topic-grid"></div>
+      </section>
+
+      <!-- WORKSHEETS -->
+      <section class="panel" id="panel-worksheets" data-title="Worksheets" hidden>
+        <div id="ws-list">
+          <p class="lede">Interactive worksheets: SQA-style written questions with instant feedback and model answers. Self-marked.</p>
+          <div class="grid-cards" id="sheet-list"></div>
+        </div>
+        <div id="ws-active" hidden></div>
+      </section>
+
+      <!-- FLASHCARDS -->
+      <section class="panel" id="panel-flashcards" data-title="Flashcards" hidden>
+        <div class="toolbar">
+          <label class="field">
+            <span class="field-label">Deck</span>
+            <select id="fc-topic"></select>
+          </label>
+          <button class="btn btn-ghost" id="fc-shuffle"><svg class="ico"><use href="#i-refresh"/></svg>Shuffle</button>
+        </div>
+        <div class="flash-wrap">
+          <button class="flashcard" id="flashcard" aria-live="polite">
+            <span class="fc-face fc-front">
+              <span class="fc-kicker" id="fc-kicker">Question</span>
+              <span class="fc-term fc-q" id="fc-term">Loading…</span>
+              <span class="fc-tap">Tap or press Space to reveal</span>
+            </span>
+            <span class="fc-face fc-back">
+              <span class="fc-kicker" id="fc-term-back">Answer</span>
+              <span class="fc-def" id="fc-def"></span>
+            </span>
+          </button>
+          <div class="fc-nav">
+            <button class="btn btn-ghost" id="fc-prev" aria-label="Previous card"><svg class="ico"><use href="#i-back"/></svg>Prev</button>
+            <span class="fc-count"><span id="fc-idx">1</span> / <span id="fc-tot">1</span> · <span class="fc-known"><span id="fc-known">0</span> known</span></span>
+            <span class="fc-rate">
+              <button class="btn btn-ghost" id="fc-skip"><svg class="ico"><use href="#i-x"/></svg>Didn't know</button>
+              <button class="btn btn-primary" id="fc-knew"><svg class="ico"><use href="#i-check"/></svg>Got it</button>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- MOCK EXAM -->
+      <section class="panel" id="panel-mock" data-title="Mock exams" hidden>
+        <div id="mock-home">
+          <p class="lede">Based on the SQA curriculum. Two sittings just like the real exam — a fresh set of questions from the whole bank every attempt.<br>Based on the SQA curriculum. Two sittings just like the real exam.<br/><strong>Paper 1:</strong> Short answers · 25 marks · 30 min | <strong>Paper 2:</strong> Extended · 25 marks · 40 min</p>
+          <div class="grid-cards" id="mock-papers"></div>
+          <div class="card" id="mock-prev-scores" hidden></div>
+          <div class="card">
+            <h2 class="card-title">Exam tips</h2>
+            <div class="tip-rows" id="mock-tips"></div>
+          </div>
+        </div>
+
+        <div id="mock-exam" hidden>
+          <div class="card exam-card">
+            <div class="exam-head">
+              <div>
+                <div class="exam-title" id="mock-paper-title">Paper 1</div>
+                <div class="muted small" id="mock-q-counter"></div>
+              </div>
+              <div class="exam-stats">
+                <span class="exam-clock" id="mock-timer-display">30:00</span>
+                <span class="tag tag-topic">Score: <b id="mock-marks-so-far">0</b> / <span id="mock-total">25</span></span>
+              </div>
+            </div>
+            <div class="bar bar-thin"><div class="bar-fill" id="mock-prog-bar"></div></div>
+            <div class="q-meta"><span class="tag tag-topic" id="mock-topic-label"></span><span class="tag tag-type" id="mock-type-label"></span></div>
+            <div class="q-text" id="mock-q-text"></div>
+            <div class="opts" id="mock-options" role="group" aria-label="Answers"></div>
+            <div class="btn-row">
+              <button type="button" class="btn btn-ghost" id="mock-skip">Skip</button>
+              <button type="button" class="btn btn-ghost btn-danger" id="mock-end">End exam</button>
+            </div>
+            <div id="mock-fb"></div>
+          </div>
+        </div>
+
+        <div id="mock-results" hidden>
+          <div class="card result-card">
+            <div class="grade-badge" id="mock-grade-icon">A</div>
+            <h2 class="result-title" id="mock-grade-title">Grade A</h2>
+            <div class="result-score" id="mock-score-display"></div>
+            <div class="muted" id="mock-grade-band"></div>
+            <p class="result-msg" id="mock-grade-msg"></p>
+            <div class="btn-row center">
+              <button class="btn btn-primary" id="mock-review-btn">Review answers</button>
+              <button class="btn btn-ghost" id="mock-again">Try again</button>
+              <button class="btn btn-ghost" id="mock-back">Back to exams</button>
+            </div>
+            <p class="muted small">Grade bands used here: A 85%, B 70%, C 60%, D 45%. They are a rough guide only — SQA sets real grade boundaries each year.</p>
+          </div>
+          <div class="card" id="mock-review-section" hidden>
+            <h2 class="card-title">Answer review</h2>
+            <div id="mock-review-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TIMER -->
+      <section class="panel" id="panel-timer" data-title="Timed challenge" hidden>
+        <div class="card" id="timer-setup">
+          <h2 class="card-title">How many can you get right?</h2>
+          <p class="muted">Quick-fire multiple-choice questions against the clock. Great for drilling key terms and facts.</p>
+          <label class="field">
+            <span class="field-label">Topic</span>
+            <select id="timer-topic"></select>
+          </label>
+          <div class="btn-row">
+            <button class="btn btn-primary" data-secs="60">1 minute</button>
+            <button class="btn btn-primary" data-secs="120">2 minutes</button>
+            <button class="btn btn-primary" data-secs="300">5 minutes</button>
+          </div>
+        </div>
+        <div class="card" id="timer-game" hidden>
+          <div class="timer-head">
+            <div class="timer-display" id="timer-display">60</div>
+            <div class="timer-score">Score <b id="timer-score-lbl">0</b></div>
+          </div>
+          <div class="q-text" id="timer-q"></div>
+          <div class="opts" id="timer-options" role="group" aria-label="Answers"></div>
+          <div class="btn-row">
+            <button type="button" class="btn btn-ghost" id="timer-skip">Skip</button>
+            <button type="button" class="btn btn-ghost btn-danger" id="timer-stop">Stop</button>
+          </div>
+          <div id="timer-fb" class="timer-fb" aria-live="polite"></div>
+        </div>
+        <div class="card result-card" id="timer-result" hidden>
+          <div class="muted">Time's up</div>
+          <div class="result-score" id="timer-final"></div>
+          <p class="result-msg" id="timer-msg"></p>
+          <button class="btn btn-primary" id="timer-again">Try again</button>
+        </div>
+      </section>
+
+      <!-- KEY FACTS -->
+      <section class="panel" id="panel-facts" data-title="Art &amp; Design Key Reference" hidden>
+        <p class="lede">Essential vocabulary and knowledge for the SQA exam</p>
+        <div class="formula-sections" id="facts-list"></div>
+      </section>
+
+      <!-- NOTEPAD -->
+      <section class="panel" id="panel-notepad" data-title="Notepad" hidden>
+        <div class="card">
+          <div class="btn-row notepad-tools">
+            <button class="btn btn-ghost btn-sm" id="note-copy">Copy</button>
+            <button class="btn btn-ghost btn-sm" id="note-download">Download</button>
+            <button class="btn btn-ghost btn-sm btn-danger" id="note-clear">Clear</button>
+            <span class="muted small" id="note-status">Saved on this device</span>
+          </div>
+          <label class="sr-only" for="notepad-text">Notes</label>
+          <textarea id="notepad-text" class="notepad" placeholder="Write key terms, model answers and notes here…"></textarea>
+        </div>
+      </section>
+
+      <!-- PROGRESS -->
+      <section class="panel" id="panel-progress" data-title="Progress" hidden>
+        <div class="stats-grid" id="stats-grid"></div>
+        <div class="card">
+          <h2 class="card-title">Topic accuracy</h2>
+          <p class="muted small">Sorted weakest first, so you know where to focus.</p>
+          <div id="topic-prog"></div>
+        </div>
+        <div class="two-col">
+          <div class="card">
+            <h2 class="card-title">Timed challenge best scores</h2>
+            <div id="leaderboard"></div>
+          </div>
+          <div class="card">
+            <h2 class="card-title">Mock exam history</h2>
+            <div id="mock-history"></div>
+          </div>
+        </div>
+        <button class="btn btn-ghost btn-danger btn-sm" id="reset-prog">Reset all progress</button>
+      </section>
+
+      <!-- RESOURCES -->
+      <section class="panel" id="panel-resources" data-title="Links &amp; tips" hidden>
+        <div class="two-col">
+          <div class="card">
+            <h2 class="card-title">Helpful links</h2>
+            <div class="link-list" id="link-list"></div>
+          </div>
+          <div class="card">
+            <h2 class="card-title">Exam tips</h2>
+            <div class="tip-rows" id="resource-tips"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SETTINGS -->
+      <section class="panel" id="panel-settings" data-title="Settings" hidden>
+        <div class="card settings">
+          <label class="setting">
+            <span class="setting-label">Your name</span>
+            <input class="input" type="text" id="student-name" placeholder="e.g. Eilidh" maxlength="30">
+          </label>
+          <div class="setting">
+            <span class="setting-label" id="goal-label">Daily question goal</span>
+            <div class="segmented" role="radiogroup" aria-labelledby="goal-label" id="goal-seg">
+              <button role="radio" data-goal="5">5</button>
+              <button role="radio" data-goal="10">10</button>
+              <button role="radio" data-goal="20">20</button>
+              <button role="radio" data-goal="30">30</button>
+            </div>
+          </div>
+          <div class="setting">
+            <span class="setting-label" id="mode-label">Appearance</span>
+            <div class="segmented" role="radiogroup" aria-labelledby="mode-label" id="mode-seg">
+              <button role="radio" data-mode="system">System</button>
+              <button role="radio" data-mode="light">Light</button>
+              <button role="radio" data-mode="dark">Dark</button>
+            </div>
+          </div>
+          <div class="setting">
+            <span class="setting-label" id="accent-label">Colour</span>
+            <div class="swatches" role="radiogroup" aria-labelledby="accent-label" id="accent-seg">
+              <button role="radio" data-accent="saltire" aria-label="Saltire blue"></button>
+              <button role="radio" data-accent="thistle" aria-label="Thistle purple"></button>
+              <button role="radio" data-accent="loch" aria-label="Loch teal"></button>
+              <button role="radio" data-accent="heather" aria-label="Heather pink"></button>
+              <button role="radio" data-accent="whisky" aria-label="Whisky amber"></button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h2 class="card-title">About</h2>
+          <p class="muted" id="about-text"></p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-about">
+        <h2>Free Nat 5 Art &amp; Design revision for Scottish pupils</h2>
+        <p>Practise for SQA National 5 Art &amp; Design with 64 questions that are marked instantly and explained, plus interactive worksheets, flashcards, timed mock exams and a timed challenge.</p>
+        <p><b>🎨 Expressive Art Studies:</b> Visual elements · Composition · Media &amp; techniques · Mood &amp; atmosphere · Artists &amp; influences.</p><p><b>✏️ Design Studies:</b> Design elements · Function · Target market · Style · Visual impact · Designers &amp; influences.</p><p><b>📖 Art &amp; Design Vocabulary:</b> Colour theory · Line · Tone · Texture · Shape &amp; form · Pattern · Scale · Composition.</p><p><b>🌍 Influences on Artists:</b> Social · Cultural · Political · Personal · Art movements · Technology · Environment.</p><p><b>📁 Portfolios &amp; Process:</b> Expressive portfolio · Design portfolio · Line of development · Evaluation · Research.</p>
       </div>
-      <div class="grade-pill" id="mock-grade"></div>
-      <div style="font-size:1rem;font-weight:800" id="mock-msg"></div>
-      <div style="font-size:0.8rem;color:var(--muted);margin-top:4px" id="mock-sub"></div>
-      <div class="res-grid">
-        <div class="res-item"><div class="res-val" id="mr-correct" style="color:var(--accent)">0</div><div class="res-key">CORRECT</div></div>
-        <div class="res-item"><div class="res-val" id="mr-wrong" style="color:var(--accent2)">0</div><div class="res-key">WRONG</div></div>
-        <div class="res-item"><div class="res-val" id="mr-time">—</div><div class="res-key">TIME</div></div>
+      <div class="footer-base">
+        <span>Free revision for Scottish students</span>
+        <span>Not affiliated with the SQA</span>
       </div>
-    </div>
-    <div class="btn-row">
-      <button class="btn btn-green" onclick="restartMock()">Try Again</button>
-      <button class="btn btn-ghost" onclick="document.getElementById('mock-home').style.display='block';document.getElementById('mock-results').style.display='none'">← Exams</button>
-    </div>
+    </footer>
   </div>
 </div>
 
-<!-- ═══════════════ TOPICS PAGE ═══════════════ -->
-<div class="page" id="page-topics">
-  <div class="section-title">🗂 Topics</div>
-  <p style="font-size:0.8rem;color:var(--muted);margin-bottom:14px">Tap a topic to practise it directly</p>
-  <div class="topic-grid" id="topic-grid-page"></div>
+<!-- Mobile tab bar -->
+<nav class="tabbar" aria-label="Main navigation">
+  <a href="#practice" data-nav="practice"><svg class="ico"><use href="#i-practice"/></svg><span>Practice</span></a>
+  <a href="#topics" data-nav="topics"><svg class="ico"><use href="#i-topics"/></svg><span>Topics</span></a>
+  <a href="#mock" data-nav="mock"><svg class="ico"><use href="#i-mock"/></svg><span>Mock</span></a>
+  <a href="#progress" data-nav="progress"><svg class="ico"><use href="#i-progress"/></svg><span>Progress</span></a>
+  <button id="more-btn" aria-expanded="false" aria-controls="more-sheet"><svg class="ico"><use href="#i-more"/></svg><span>More</span></button>
+</nav>
+<div class="sheet-backdrop" id="sheet-backdrop" hidden></div>
+<div class="sheet" id="more-sheet" hidden role="dialog" aria-label="More pages">
+  <a href="#worksheets" data-nav="worksheets"><svg class="ico"><use href="#i-worksheets"/></svg>Worksheets</a>
+  <a href="#flashcards" data-nav="flashcards"><svg class="ico"><use href="#i-flashcards"/></svg>Flashcards</a>
+  <a href="#timer" data-nav="timer"><svg class="ico"><use href="#i-timer"/></svg>Timed challenge</a>
+  <a href="#facts" data-nav="facts"><svg class="ico"><use href="#i-skills"/></svg>Key facts</a>
+  <a href="#notepad" data-nav="notepad"><svg class="ico"><use href="#i-notepad"/></svg>Notepad</a>
+  <a href="#resources" data-nav="resources"><svg class="ico"><use href="#i-resources"/></svg>Links &amp; tips</a>
+  <a href="#settings" data-nav="settings"><svg class="ico"><use href="#i-settings"/></svg>Settings</a>
 </div>
 
-<!-- ═══════════════ KEY FACTS PAGE ═══════════════ -->
-<div class="page" id="page-formulas">
-  <div class="section-title">🎨 Art & Design Key Reference</div>
-  <p style="font-size:0.8rem;color:var(--muted);margin-bottom:16px">Essential vocabulary and knowledge for the SQA exam</p>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <div class="formula-section">
-    <h3>🎨 Expressive Visual Elements</h3>
-    <div class="formula-cards">
-      <div class="formula-card"><div class="formula-name">Colour</div><div class="formula-val">Hue (colour name) · Tone (lightness/darkness) · Saturation (intensity/purity)<br>Warm colours (red/orange/yellow): advance, energetic<br>Cool colours (blue/green/purple): recede, calm<br>Complementary colours: opposite on colour wheel — maximum contrast<br>Harmonious colours: adjacent on colour wheel — unified effect</div></div>
-      <div class="formula-card"><div class="formula-name">Line</div><div class="formula-val">Defines edges and outlines · Creates direction and movement<br>Horizontal = calm/stable · Vertical = strength/height<br>Diagonal = movement/tension · Curved = flowing/organic<br>Jagged = energy/aggression · Gestural = spontaneous/expressive</div></div>
-      <div class="formula-card"><div class="formula-name">Tone</div><div class="formula-val">Range from lightest highlight to darkest shadow<br>Creates illusion of 3D form (tonal modelling)<br>Tonal contrast: dramatic (high contrast) or subtle (low contrast)<br>Chiaroscuro: extreme light/dark contrast (Caravaggio, Rembrandt)</div></div>
-      <div class="formula-card"><div class="formula-name">Texture</div><div class="formula-val">Actual texture: physically felt on surface (impasto, collage, sculpture)<br>Implied texture: visual illusion on 2D surface (hatching, stippling, mark-making)<br>Impasto: thick paint application — creates raised, tactile surface<br>Describes HOW the material has been applied</div></div>
-      <div class="formula-card"><div class="formula-name">Shape & Form</div><div class="formula-val">Shape: 2D, flat (circle, triangle, organic shape)<br>Form: 3D, has volume and mass (sphere, cube, organic form)<br>Geometric: mathematical, precise · Organic: natural, irregular<br>Form created in 2D through tonal modelling and perspective</div></div>
-      <div class="formula-card"><div class="formula-name">Pattern</div><div class="formula-val">Repetition of visual elements (shape, line, colour, texture)<br>Regular: geometric, predictable · Irregular: varied, organic<br>Creates rhythm, visual interest, cultural identity<br>Central to textile design, decorative arts, and many painting traditions</div></div>
-      <div class="formula-card"><div class="formula-name">Composition, Scale & Other Elements</div><div class="formula-val">Composition: arrangement of elements — focal point, balance, perspective, viewpoint<br>Scale: relative size — creates emphasis, depth, visual hierarchy<br>Style: distinctive visual characteristics of an artist or movement<br>Mood & Atmosphere: emotional quality — HOW was it achieved?<br>Visual Impact: how powerfully it grabs the viewer\'s attention</div></div>
-    </div>
-  </div>
-
-  <div class="formula-section">
-    <h3>✏️ Design Elements & Issues</h3>
-    <div class="formula-cards">
-      <div class="formula-card"><div class="formula-name">Function & Fitness for Purpose</div><div class="formula-val">Function: what the product/design is made to DO<br>Fitness for purpose: does it successfully achieve its function for its intended users?<br>Must consider: safety, durability, ease of use, appropriateness for target market</div></div>
-      <div class="formula-card"><div class="formula-name">Target Market</div><div class="formula-val">The specific group the design is aimed at<br>Influences: aesthetics, materials, price, scale, communication approach<br>Research into: age, lifestyle, income, interests, needs<br>All design decisions should be tailored to the target market</div></div>
-      <div class="formula-card"><div class="formula-name">Layout & Typography</div><div class="formula-val">Layout: organisation of text, images, space to guide the viewer<br>Visual hierarchy: most → least important; guides reading order<br>Typography: typeface choice, size, weight, spacing, colour<br>Serif = traditional · Sans-serif = modern · Script = elegant/personal</div></div>
-      <div class="formula-card"><div class="formula-name">Design Areas (Question Paper)</div><div class="formula-val">Graphics/communication design: logos, posters, packaging, advertising<br>Product design: furniture, appliances, tools, electronics<br>Interior/environmental/architectural design: spaces and buildings<br>Jewellery design: wearable decorative objects<br>Fashion/textiles: clothing, fabric, pattern design</div></div>
-    </div>
-  </div>
-
-  <div class="formula-section">
-    <h3>🌍 Key Influences on Artists & Designers</h3>
-    <div class="formula-cards">
-      <div class="formula-card"><div class="formula-name">SQA List of Influences</div><div class="formula-val">Living conditions (economic) · Family and community · Other artists/art movements<br>Exposure to different cultures · Physical environment/geography<br>New and emerging technology · Politics · Gender<br>Religion/belief · National/world events<br>Other fields (science, literature) · Personal circumstances · Health and wellbeing</div></div>
-      <div class="formula-card"><div class="formula-name">How to Answer Influences Questions</div><div class="formula-val">IDENTIFY the specific influence (1 mark): e.g. "Peploe was influenced by the Fauves"<br>DESCRIBE how it can be seen in the work (1 mark): e.g. "which led to his use of bold, non-naturalistic colour in his still life paintings"<br>= 2 marks per influence, 4 marks total (2 influences required)</div></div>
-      <div class="formula-card"><div class="formula-name">Key Art Movements</div><div class="formula-val">Impressionism: capturing light, loose brushwork, en plein air (1860s–80s)<br>Post-Impressionism: personal expression, structure, bold colour (1880s–90s)<br>Fauvism: bold non-naturalistic colour for expression (c.1905)<br>Expressionism: emotional distortion and intense colour (1905–30s)<br>Cubism: multiple viewpoints simultaneously (c.1908)<br>Art Nouveau: organic forms, flowing lines, craft (1890–1910)<br>Bauhaus: function + craft + industrial design (1919–33)<br>Pop Art: consumer culture, mass media imagery (1950s–60s)</div></div>
-      <div class="formula-card"><div class="formula-name">Scottish Artists to Know</div><div class="formula-val">Scottish Colourists: Peploe, Cadell, Hunter, Fergusson<br>Influenced by: Fauvism, Post-Impressionism, French avant-garde<br>Known for: vibrant colour, painterly technique, still life, landscapes, figures<br>Charles Rennie Mackintosh: Art Nouveau architect/designer, Glasgow Style</div></div>
-    </div>
-  </div>
-
-  <div class="formula-section">
-    <h3>📋 Exam Technique & Portfolio</h3>
-    <div class="formula-cards">
-      <div class="formula-card"><div class="formula-name">Question Paper Structure</div><div class="formula-val">Section 1: Expressive Art Studies — 20 marks<br>  Q1 (mandatory, 10 marks): your studied artist — 3 prompts for part (a) + influences for part (b)<br>  Q2–6 (optional, pick ONE, 10 marks): unseen artwork<br>Section 2: Design Studies — 20 marks<br>  Q7 (mandatory): your studied designer<br>  Q8–12 (optional, pick ONE): unseen design</div></div>
-      <div class="formula-card"><div class="formula-name">How to Write Justified Answers</div><div class="formula-val">DESCRIBE the visual element → EXPLAIN its EFFECT<br>❌ "The painting has bright colours." (0 marks — description only)<br>✅ "The artist used warm, vibrant reds and oranges which contrast with the cool blues, creating a sense of depth and drawing the viewer\'s eye to the focal point." (mark awarded)<br>Always ask: WHY? WHAT EFFECT does it have?</div></div>
-      <div class="formula-card"><div class="formula-name">Portfolio Requirements</div><div class="formula-val">Both portfolios max 3 A2-sized single-sided sheets (must fold to A1)<br>Expressive portfolio: theme → research → line of development → final piece → evaluation<br>Design portfolio: brief → research + market research → line of development → solution → evaluation<br>Evaluation: mandatory SQA template — justified personal opinions</div></div>
-    </div>
-  </div>
-
-</div>
-
-<!-- ═══════════════ PROGRESS PAGE
-
-<!-- ═══════════════ PROGRESS PAGE ═══════════════ -->
-<div class="page" id="page-progress">
-  <div class="section-title">📊 Your Progress</div>
-  <div class="prog-stat-grid">
-    <div class="prog-stat"><div class="prog-stat-val" id="ps-total">0</div><div class="prog-stat-key">ANSWERED</div></div>
-    <div class="prog-stat"><div class="prog-stat-val" id="ps-correct">0</div><div class="prog-stat-key">CORRECT</div></div>
-    <div class="prog-stat"><div class="prog-stat-val" id="ps-streak">0</div><div class="prog-stat-key">BEST STREAK</div></div>
-    <div class="prog-stat"><div class="prog-stat-val" id="ps-xp">0</div><div class="prog-stat-key">TOTAL XP</div></div>
-  </div>
-  <div class="section-label" style="margin-bottom:10px">Topic Accuracy</div>
-  <div id="topic-prog-rows"></div>
-  <button class="btn btn-red" onclick="resetAllProgress()" style="margin-top:16px;width:100%">🔄 Reset All Progress</button>
-</div>
-
-<!-- ═══════════════ LINKS PAGE ═══════════════ -->
-<div class="page" id="page-links">
-  <div class="section-title">🔗 Helpful Links</div>
-  <div class="links-grid">
-    <a class="link-card" href="https://www.sqa.org.uk/sqa/47388.html" target="_blank" rel="noopener">
-      <div class="link-icon">🏛</div>
-      <div><div class="link-title">SQA — Nat 5 Art &amp; Design</div><div class="link-desc">Official past papers, marking schemes & course spec</div></div>
-    </a>
-    <a class="link-card" href="https://www.bbc.co.uk/bitesize/subjects/zqpfb82" target="_blank" rel="noopener">
-      <div class="link-icon">📺</div>
-      <div><div class="link-title">BBC Bitesize — Nat 5 Art &amp; Design</div><div class="link-desc">Videos, notes and revision for every topic</div></div>
-    </a>
-    <a class="link-card" href="https://scholar.hw.ac.uk" target="_blank" rel="noopener">
-      <div class="link-icon">🎓</div>
-      <div><div class="link-title">SCHOLAR (Heriot-Watt)</div><div class="link-desc">Detailed online course for Scottish Nat 5 Biology</div></div>
-    </a>
-    <a class="link-card" href="https://www.understandingstandards.org.uk/Subjects/ArtandDesign" target="_blank" rel="noopener">
-      <div class="link-icon">📖</div>
-      <div><div class="link-title">Understanding Standards</div><div class="link-desc">SQA exemplar answers and marking guidance</div></div>
-    </a>
-    <a class="link-card" href="https://www.sqa.org.uk/sqa/45709.html" target="_blank" rel="noopener">
-      <div class="link-icon">🔬</div>
-      <div><div class="link-title">SQA — Past Papers &amp; Specimen Papers</div><div class="link-desc">Past question papers and marking instructions for Art &amp; Design</div></div>
-    </a>
+<div class="install-banner" id="install-banner" hidden>
+  <div id="install-text"><b>Install Nat 5 Art &amp; Design</b><small>Add it to your home screen — works offline.</small></div>
+  <div id="ios-text" hidden><b>Add to your Home Screen</b><small>Tap <svg class="ico ios-share" aria-label="Share"><use href="#i-share"/></svg> <b>Share</b>, then <b>Add to Home Screen</b>. It works like an app, even offline.</small></div>
+  <div class="btn-row">
+    <button class="btn btn-primary btn-sm" id="install-btn">Install</button>
+    <button class="btn btn-ghost btn-sm" id="dismiss-install" aria-label="Dismiss">Not now</button>
   </div>
 </div>
 
-<!-- ═══════════════ SETTINGS PAGE ═══════════════ -->
-<div class="page" id="page-settings">
-  <div class="section-title">⚙️ Settings</div>
-  <div class="settings-card">
-    <h3>Your Profile</h3>
-    <div class="setting-row">
-      <span class="setting-label">Your name</span>
-      <input class="setting-input" id="set-name" placeholder="e.g. Eilidh" style="flex:1">
-    </div>
-    <div class="setting-row">
-      <span class="setting-label">Daily question goal</span>
-      <select class="setting-input" id="set-goal">
-        <option value="5">5 questions</option>
-        <option value="10" selected>10 questions</option>
-        <option value="20">20 questions</option>
-        <option value="30">30 questions</option>
-      </select>
-    </div>
-    <button class="btn btn-green" onclick="saveSettings()" style="margin-top:10px;border:none">💾 Save</button>
-  </div>
-  <div class="settings-card">
-    <h3>ℹ️ About</h3>
-    <p style="font-size:0.82rem;line-height:1.6;color:var(--muted)">
-      Covers all areas of the SQA Nat 5 Art &amp; Design question paper: Expressive Art Studies, Design Studies, Art &amp; Design Vocabulary, Influences, and Portfolio &amp; Process.<br><br>
-      ✅ Verified against SQA Course Spec <strong>C804 75</strong> (valid from 2024–25, confirmed current 2025–26).<br><br>
-      95 practice questions · Worksheets · Mock exam · Art vocabulary reference · XP levelling system.<br><br>
-      Progress saves automatically in your browser.
-    </p>
-  </div>
-</div>
-
-<script>
-// ✅ SQA Nat 5 Art and Design Course Spec C804 75 (valid from 2024-25, confirmed current 2025-26)
-// Question paper: Section 1 = Expressive Art Studies (20 marks) | Section 2 = Design Studies (20 marks)
-// Total QP = 40 marks (scaled to 50) + Expressive Portfolio 100 marks + Design Portfolio 100 marks
-const TOPICS = [
-  { id: 'expressive', name: 'Expressive Art Studies',   icon: '🎨', sub: 'Visual elements · Composition · Media & techniques · Mood & atmosphere · Artists & influences' },
-  { id: 'design',     name: 'Design Studies',           icon: '✏️', sub: 'Design elements · Function · Target market · Style · Visual impact · Designers & influences' },
-  { id: 'vocab',      name: 'Art & Design Vocabulary',  icon: '📖', sub: 'Colour theory · Line · Tone · Texture · Shape & form · Pattern · Scale · Composition' },
-  { id: 'influences', name: 'Influences on Artists',    icon: '🌍', sub: 'Social · Cultural · Political · Personal · Art movements · Technology · Environment' },
-  { id: 'portfolio',  name: 'Portfolios & Process',     icon: '📁', sub: 'Expressive portfolio · Design portfolio · Line of development · Evaluation · Research' },
-];
-
-const QUESTIONS = [
-  // ══════════════════════════════════════════════════════
-  // EXPRESSIVE ART STUDIES (22 questions)
-  // ══════════════════════════════════════════════════════
-  {topic:'expressive',type:'mcq',q:'In the SQA question paper, Section 1 (Expressive Art Studies) requires candidates to:',
-    opts:['Design a product for a given brief','Comment on an unseen artwork AND demonstrate knowledge of an artist they have studied, using appropriate art vocabulary','Write a biography of a famous artist','Produce a painting in exam conditions'],
-    ans:1,explain:'Section 1 Expressive Art Studies: candidates answer the mandatory question (about their studied artist) and ONE optional question (commenting on an unseen image). Both require justified, analytical responses using art vocabulary — not just description.'},
-  {topic:'expressive',type:'mcq',q:'Which response would gain a mark for COLOUR in the SQA exam?',
-    opts:['"The painting has bright colours."','The painting uses warm red and orange tones in the foreground which contrast with the cool blues in the background, creating depth."','"There is a lot of colour in this painting."','"The artist used paint."'],
-    ans:1,explain:'SQA marking principle: marks are NOT awarded for description alone. Responses must be JUSTIFIED — stating the visual element AND explaining its effect/purpose. "Bright colours" is descriptive. Stating that warm/cool contrast creates depth is analytical and would gain a mark.'},
-  {topic:'expressive',type:'mcq',q:'COMPOSITION in expressive art refers to:',
-    opts:['The materials used to make the artwork','The way elements are arranged and organised within an artwork — how the artist has structured the visual space','The mood or feeling created by the artwork','The scale or size of the artwork'],
-    ans:1,explain:'Composition: the arrangement of visual elements within an artwork — positioning of objects, use of space, focal points, balance, perspective, viewpoint. A well-composed artwork leads the viewer\'s eye and creates visual interest.'},
-  {topic:'expressive',type:'mcq',q:'MEDIA HANDLING AND TECHNIQUES refers to:',
-    opts:['How the artwork makes the viewer feel','The subject matter shown in the artwork','The materials the artist has used and HOW they have used them — brushwork, texture, layering, mark-making','The colours used in the artwork'],
-    ans:2,explain:'Media handling: how the artist has physically worked with materials — e.g. "thick impasto paint has been applied with a palette knife creating a rough, textured surface" or "fine brushwork has been used to create detail and realism." Always describe the technique AND its effect.'},
-  {topic:'expressive',type:'mcq',q:'MOOD AND ATMOSPHERE in an artwork is BEST described as:',
-    opts:['The physical size of the artwork','The feeling or emotional impact created by the artwork — how it makes the viewer feel and how the artist has achieved this','The title of the artwork','The type of paint used'],
-    ans:1,explain:'Mood and atmosphere: the emotional quality of the artwork and how it was achieved — e.g. "dark, stormy colours and heavy textures create an oppressive, threatening mood" or "soft, pastel tones and gentle brushwork create a peaceful, calm atmosphere."'},
-  {topic:'expressive',type:'mcq',q:'TONE in art refers to:',
-    opts:['The colour of an object','The lightness or darkness of a colour — from the lightest highlight to the darkest shadow','The rough or smooth quality of a surface','The size of different elements in a composition'],
-    ans:1,explain:'Tone: the range of light and dark values in an artwork. Tonal contrast creates depth, volume, and drama. Artists use tone to: model 3D form (light/shadow on objects), create depth (light foreground, dark background), and establish mood (dark tones = sombre; light tones = cheerful).'},
-  {topic:'expressive',type:'mcq',q:'LINE in expressive art can be used to:',
-    opts:['Only show the outline of objects','Create structure, direct the viewer\'s eye, suggest movement, define edges, create pattern, and convey mood — e.g. flowing lines suggest calm, jagged lines suggest tension','Only measure proportions','Only show perspective'],
-    ans:1,explain:'Line is a fundamental visual element with many expressive uses: define edges/outlines, create direction/movement, suggest energy (jagged vs flowing), build pattern/texture (hatching), show perspective (converging lines). Always consider: type of line, how it is used, and what effect it creates.'},
-  {topic:'expressive',type:'mcq',q:'TEXTURE in art can be either:',
-    opts:['Only smooth or rough','Actual (tactile — physically rough or smooth) OR implied (visual — the illusion of texture on a 2D surface created through brushwork, mark-making, or other techniques)','Only created with oil paint','Only relevant to sculpture'],
-    ans:1,explain:'Actual texture: physically felt on the surface (impasto paint, collage materials, sculpture). Implied texture: visual illusion of texture on a 2D surface — achieved through mark-making, stippling, hatching, or layered paint that appears to have texture when viewed.'},
-  {topic:'expressive',type:'mcq',q:'SHAPE AND FORM in art — what is the difference between them?',
-    opts:['They are exactly the same thing','Shape is 2D (flat — defined by outline), while form is 3D (has depth, volume, and mass)','Shape is 3D and form is 2D','Shape only refers to geometric shapes'],
-    ans:1,explain:'Shape: 2D, flat, defined by line or colour (circle, triangle, organic shape). Form: 3D, has volume and mass (sphere, cube, organic form). In 2D art, artists create the illusion of form through tonal modelling (light and shadow), perspective, and foreshortening.'},
-  {topic:'expressive',type:'mcq',q:'SCALE in art refers to:',
-    opts:['The style of an artwork','The relative size of elements within an artwork compared to each other or to the viewer — used to create emphasis, perspective, and visual hierarchy','The subject matter of an artwork','The colour palette used'],
-    ans:1,explain:'Scale: the relative size of elements. Artists use scale to: create a sense of depth/perspective (large foreground, small background), emphasise importance (key objects shown larger), create visual impact (unexpectedly large scale draws attention), and express power relationships.'},
-  {topic:'expressive',type:'mcq',q:'PATTERN in art is created when:',
-    opts:['An artwork has only one colour','Visual elements (shapes, lines, colours, textures) are repeated regularly or irregularly to create a decorative or structural effect','An artist uses perspective','An artwork has a clear focal point'],
-    ans:1,explain:'Pattern: repetition of visual elements. Can be regular (geometric, predictable — tiles, wallpaper) or irregular (organic, varied). Pattern can: add visual interest, create rhythm, suggest cultural identity, and unify a composition. Common in textile design, decorative arts, and many painting traditions.'},
-  {topic:'expressive',type:'mcq',q:'SUBJECT MATTER in an artwork refers to:',
-    opts:['The style or movement the artwork belongs to','WHAT is depicted in the artwork — the people, objects, landscape, or abstract forms the artist has chosen to represent','The materials used to make the artwork','The mood created by the artwork'],
-    ans:1,explain:'Subject matter: the content or theme of an artwork — what it shows. Examples: portrait (people), still life (objects), landscape (places/nature), abstract (non-representational forms). The choice of subject matter is a creative decision that contributes to the meaning and impact of the work.'},
-  {topic:'expressive',type:'mcq',q:'STYLE in an artwork refers to:',
-    opts:['The size of the artwork','The distinctive visual approach, manner of working, and characteristics of an artist\'s work — which art movement they belong to or how their work is recognisable','The cost of the artwork','The materials the artist used'],
-    ans:1,explain:'Style: the distinctive visual characteristics of an artist\'s work. Can describe an individual\'s approach OR an art movement. Examples: Impressionism (loose brushwork, capturing light), Expressionism (emotional, distorted), Realism (accurate representation), Abstract (non-representational).'},
-  {topic:'expressive',type:'mcq',q:'VISUAL IMPACT refers to:',
-    opts:['The weight of an artwork','The immediate, powerful effect an artwork has on the viewer — how strongly it grabs attention and creates an impression','The subject matter of an artwork','The size of the canvas'],
-    ans:1,explain:'Visual impact: how strongly an artwork grabs the viewer\'s attention and creates an immediate impression. Achieved through: bold colour contrast, strong composition, unexpected scale, striking subject matter, dynamic line, or dramatic lighting. Always justify WHY something creates visual impact.'},
-  {topic:'expressive',type:'fillin',q:'When answering an SQA question about a visual element, you must not just DESCRIBE — you must _____ your answer by explaining the effect it creates.',ans:'justify',explain:'SQA marking principle: marks are NOT awarded for description alone. Always justify by explaining the EFFECT of the visual element. "The painting uses diagonal lines" is descriptive. "The diagonal lines create a sense of movement and draw the viewer\'s eye into the composition" is justified.'},
-  {topic:'expressive',type:'fillin',q:'The way the artist has arranged elements within an image to create structure, lead the viewer\'s eye, and establish focal points is called _____.',ans:'composition',explain:'Composition: the deliberate organisation of visual elements within an artwork. A strong composition guides the viewer\'s eye, creates balance/imbalance, establishes hierarchy of importance, and makes an image visually engaging. Techniques: rule of thirds, leading lines, focal points, foreground/middle ground/background.'},
-  {topic:'expressive',type:'fillin',q:'In the SQA question paper, Section 1 focuses on _____ Art Studies, and Section 2 focuses on _____ Studies.',ans:'Expressive',explain:'Section 1 = Expressive Art Studies (20 marks) — commenting on artworks and your studied artist. Section 2 = Design Studies (20 marks) — commenting on design works. Both sections have one mandatory question and five optional questions; candidates answer the mandatory PLUS one optional.'},
-
-  // ══════════════════════════════════════════════════════
-  // DESIGN STUDIES (20 questions)
-  // ══════════════════════════════════════════════════════
-  {topic:'design',type:'mcq',q:'In the SQA question paper, Section 2 (Design Studies) could include images of:',
-    opts:['Only paintings and drawings','Graphics, product design, interior/environmental/architectural design, jewellery, and fashion/textiles','Only sculpture','Only industrial machinery'],
-    ans:1,explain:'Section 2 Design Studies: candidates can expect unseen images from any design discipline — graphics (logos, packaging, posters), product design, interior/environmental/architectural design, jewellery, fashion/textiles. Know design vocabulary that applies across ALL these areas.'},
-  {topic:'design',type:'mcq',q:'FUNCTION as a design issue refers to:',
-    opts:['How attractive the design looks','What the product or design DOES — its intended purpose and how effectively it performs it','The target market for the product','The materials used in the product'],
-    ans:1,explain:'Function: the primary purpose a design must fulfill — what it is made to do. A chair must support weight comfortably; a logo must communicate a brand clearly; a poster must convey a message effectively. Good design effectively fulfills its function.'},
-  {topic:'design',type:'mcq',q:'FITNESS FOR PURPOSE in design means:',
-    opts:['The designer is physically fit','The design fully meets the requirements of its intended use — it successfully fulfills its function for its target market in its intended context','The design looks attractive','The design was made on time'],
-    ans:1,explain:'Fitness for purpose: the extent to which a design successfully meets all its requirements. A product is fit for purpose when: it works as intended, it suits the target user, it is safe, appropriate materials have been used, and it meets the brief. This is a key evaluation criterion.'},
-  {topic:'design',type:'mcq',q:'TARGET MARKET/AUDIENCE as a design issue refers to:',
-    opts:['The physical size of the product','The specific group of people the design is aimed at — which influences all design decisions including style, materials, colour, and price','The country where the product is sold','The manufacturing cost'],
-    ans:1,explain:'Target market: the specific audience for a design. Knowledge of the target market influences: aesthetics (what they find appealing), function (what they need it to do), materials (what they can afford/expect), scale, and communication approach. A children\'s toy has very different requirements from a luxury watch.'},
-  {topic:'design',type:'mcq',q:'VISUAL IMPACT in design refers to:',
-    opts:['How much the product costs','The immediate, powerful visual impression a design makes — how effectively it grabs attention and communicates its message','How the product functions','The weight of the product'],
-    ans:1,explain:'Visual impact in design: how strongly a design grabs the viewer\'s attention and communicates its purpose immediately. Achieved through: bold typography, striking colour combinations, strong shapes, dynamic layout, unexpected scale. Particularly important in graphic design and advertising.'},
-  {topic:'design',type:'mcq',q:'STYLE in design refers to:',
-    opts:['How the product works mechanically','The distinctive visual approach and aesthetic characteristics of a design — including the design movement, period, or tradition it belongs to','Only the colour scheme of the design','The price of the product'],
-    ans:1,explain:'Style in design: the distinctive visual approach — could describe a period (Art Deco, Modernism, Bauhaus), a designer\'s personal aesthetic, or a cultural tradition. Style decisions include: typography choice, colour palette, use of ornamentation, proportion, and overall visual language.'},
-  {topic:'design',type:'mcq',q:'MATERIALS AND TECHNIQUES as a design issue refers to:',
-    opts:['The price of the product only','The choice of materials and HOW they are used or processed — which should be appropriate for the function, target market, aesthetic, and environmental context','Only the colour of materials','Only the size of the product'],
-    ans:1,explain:'Materials and techniques: what something is made from and how it is made. In design, material choices affect: function (strength, durability, flexibility), aesthetics (appearance, texture, colour), target market (luxury vs budget), sustainability (environmental impact), and safety.'},
-  {topic:'design',type:'mcq',q:'LAYOUT in graphic design refers to:',
-    opts:['The colour scheme of a design','The arrangement of text, images, and other visual elements within a space — how they are organised to guide the viewer and communicate the message effectively','The font style used','The size of the printed piece'],
-    ans:1,explain:'Layout: the organisation of elements on a page or screen — text, images, white space, borders, headings. Good layout guides the viewer\'s eye, creates visual hierarchy (most important → least important), ensures readability, and creates visual balance. Key principles: alignment, proximity, contrast, repetition.'},
-  {topic:'design',type:'mcq',q:'LETTERING/TYPOGRAPHY in design refers to:',
-    opts:['Only handwritten text','The choice of typefaces/fonts and how they are used — size, weight, spacing, colour — to communicate tone, personality, and hierarchy in a design','Only the size of text','Only the colour of text'],
-    ans:1,explain:'Typography/lettering: the art of arranging type. Choices include: typeface (serif, sans-serif, decorative, script), size, weight (bold, light), spacing (tracking, kerning, leading), colour, and placement. Typography communicates personality — a serif font feels traditional; a bold sans-serif feels modern and strong.'},
-  {topic:'design',type:'mcq',q:'DECORATION in design refers to:',
-    opts:['The main function of a product','Ornamentation, pattern, surface detail, or embellishment added to a design for aesthetic purposes — beyond what is purely functional','The manufacturing process','The target market for a product'],
-    ans:1,explain:'Decoration: ornamental elements added to enrich the visual appearance of a design. Can be: surface pattern, embossing, engraving, applied colour, illustrations, or motifs. In some design traditions, decoration is minimal (Minimalism); in others it is elaborate (Art Nouveau, traditional crafts).'},
-  {topic:'design',type:'mcq',q:'Which type of design would you MOST likely study when looking at a logo, poster, or packaging?',
-    opts:['Product design','Interior design','Graphic design/communication design','Architectural design'],
-    ans:2,explain:'Graphic design (communication design): includes logos, posters, packaging, book covers, websites, advertising, and signage. Key issues: visual communication, typography, colour, layout, and imagery. The design must communicate clearly and effectively to its target audience.'},
-  {topic:'design',type:'fillin',q:'The specific group of people that a design is created for and aimed at is called the _____ market.',ans:'target',explain:'Target market: the defined audience for a design. All design decisions should be tailored to this audience. Understanding the target market requires research into: age, gender, lifestyle, income level, interests, and needs. A children\'s book has very different design requirements from a luxury goods catalogue.'},
-  {topic:'design',type:'fillin',q:'The design principle that asks whether a product successfully fulfills its intended purpose for its intended users is called _____ for purpose.',ans:'fitness',explain:'Fitness for purpose: the primary evaluation criterion in design. A design is fit for purpose when it: functions as intended, suits the target user, is safe to use, uses appropriate materials, and meets all the requirements of the design brief.'},
-
-  // ══════════════════════════════════════════════════════
-  // ART & DESIGN VOCABULARY (20 questions)
-  // ══════════════════════════════════════════════════════
-  {topic:'vocab',type:'mcq',q:'WARM COLOURS in colour theory are:',
-    opts:['Blues, greens, and purples — they appear to recede into the background','Reds, oranges, and yellows — they appear to advance and create energy and warmth','Only grey and brown tones','Only primary colours'],
-    ans:1,explain:'Warm colours (reds, oranges, yellows): associated with warmth, energy, fire. In composition, warm colours tend to advance (come forward) in a picture. Cool colours (blues, greens, purples): associated with cold, calm, water. They tend to recede (go back). Artists use warm/cool contrast to create depth and mood.'},
-  {topic:'vocab',type:'mcq',q:'COMPLEMENTARY COLOURS are:',
-    opts:['Colours that are next to each other on the colour wheel — harmonious and similar','Colours that are opposite each other on the colour wheel — they create maximum contrast when placed together','Only red, yellow, and blue','Only black and white'],
-    ans:1,explain:'Complementary colours: opposite each other on the colour wheel (red/green, blue/orange, yellow/purple). When placed next to each other they intensify each other, creating vibrant, high-contrast effects. Used by Impressionists and Post-Impressionists to create luminous, vibrant works.'},
-  {topic:'vocab',type:'mcq',q:'TONAL CONTRAST in an artwork means:',
-    opts:['Using many different colours','Strong differences between light and dark areas — creates drama, depth, and visual impact','Using only neutral colours','Using symmetrical composition'],
-    ans:1,explain:'Tonal contrast: the difference between light and dark areas. High tonal contrast (bright highlights next to deep shadows) = dramatic, striking. Low tonal contrast (similar tones throughout) = subtle, harmonious, flat. Artists like Caravaggio used extreme tonal contrast (chiaroscuro) for dramatic effect.'},
-  {topic:'vocab',type:'mcq',q:'CHIAROSCURO is an Italian technique meaning:',
-    opts:['A type of printmaking process','The use of strong contrasts between light and dark (literally "light-dark") to model form and create drama — associated with artists like Caravaggio and Leonardo da Vinci','A type of sculpture','A form of abstract art'],
-    ans:1,explain:'Chiaroscuro (Italian: chiaro = light, scuro = dark): a dramatic technique using extreme contrasts of light and dark to model three-dimensional form and create theatrical, dramatic effects. Associated with the Baroque period — Caravaggio, Rembrandt, and Leonardo da Vinci used it masterfully.'},
-  {topic:'vocab',type:'mcq',q:'IMPASTO is a painting technique where:',
-    opts:['Paint is thinned with water to create transparent washes','Paint is applied thickly — sometimes with a palette knife — creating a raised, textured surface with visible marks','Paint is applied smoothly with no visible brushstrokes','A painting is made on paper rather than canvas'],
-    ans:1,explain:'Impasto: thick, heavy application of paint — often with a palette knife or stiff brush. Creates actual texture on the surface, with visible marks and ridges. Van Gogh used impasto extensively to create energy and expressiveness. Contrast with smooth, blended application.'},
-  {topic:'vocab',type:'mcq',q:'PERSPECTIVE in art refers to:',
-    opts:['The emotional mood of an artwork','Techniques used to create the illusion of depth and three-dimensional space on a 2D surface — including linear perspective (converging lines) and aerial perspective (distant things are cooler and less distinct)','The subject matter of the painting','The scale of different objects'],
-    ans:1,explain:'Perspective: creating the illusion of depth on a flat surface. Linear perspective: parallel lines converge to a vanishing point on the horizon. Aerial/atmospheric perspective: objects in the distance appear lighter, cooler, less detailed, and less saturated — mimics how atmosphere affects our view of distant things.'},
-  {topic:'vocab',type:'mcq',q:'FOCAL POINT in a composition means:',
-    opts:['The background of a painting','The area of an artwork that draws the viewer\'s eye first and commands the most attention — created through contrast, placement, detail, or colour','The frame around a painting','The style of the artwork'],
-    ans:1,explain:'Focal point: the main point of interest in a composition — where the viewer\'s eye is drawn first. Created by: contrast (light against dark, bright colour against neutral), position (rule of thirds, central placement), detail (more detailed areas draw the eye), converging lines, or scale.'},
-  {topic:'vocab',type:'mcq',q:'FORESHORTENING in drawing means:',
-    opts:['Drawing something very small','Distorting a form to show it coming towards or receding from the viewer — making parts closer to the viewer appear larger than those further away','Drawing quickly','Drawing using only outlines'],
-    ans:1,explain:'Foreshortening: a perspective technique where a form pointing towards the viewer appears compressed/distorted. An arm pointing directly at you appears shorter than its actual length. Used to create a powerful sense of depth and the illusion that forms project out of the picture plane.'},
-  {topic:'vocab',type:'mcq',q:'PRIMARY COLOURS in traditional colour theory are:',
-    opts:['Red, green, and blue (RGB — used in light and screens)','Red, yellow, and blue (RYB — traditional artist\'s colour theory, pigments)','Green, orange, and purple','Black, white, and grey'],
-    ans:1,explain:'Traditional primary colours (pigments): red, yellow, blue. Cannot be made by mixing other colours. Mix primaries to make secondaries: red+yellow=orange, yellow+blue=green, red+blue=purple. Note: in light (RGB) the primaries are different — red, green, blue. In printing (CMYK): cyan, magenta, yellow, black.'},
-  {topic:'vocab',type:'mcq',q:'ABSTRACT art is characterised by:',
-    opts:['Realistic, highly detailed representation of subjects','Work that departs from realistic representation — using form, colour, and line to express ideas or emotions without depicting recognisable objects','Only geometric shapes','Only black and white'],
-    ans:1,explain:'Abstract art: work that does not attempt to represent external reality accurately. Instead uses formal elements (colour, shape, line, texture) to express ideas, emotions, or aesthetic qualities. Ranges from semi-abstract (recognisable but simplified) to fully non-representational (no recognisable subject).'},
-  {topic:'vocab',type:'fillin',q:'The technique of using contrasting light and dark to create the illusion of volume and depth is called _____ modelling.',ans:'tonal',explain:'Tonal modelling: using gradations from light to dark to suggest three-dimensional form. The light side of an object = highlight (lightest tone); the darkest area = shadow; the reflected light at the edge = reflected light. Together these tones create the illusion of a solid, three-dimensional object on a flat surface.'},
-  {topic:'vocab',type:'fillin',q:'Colours that are opposite each other on the colour wheel — such as red and green, or blue and orange — are called _____ colours.',ans:'complementary',explain:'Complementary colours: opposite on the colour wheel. They create maximum contrast and visual vibration when placed next to each other. Post-Impressionists like Van Gogh used complementary colour pairs to create vibrant, energetic effects. Artists also use complements to make colours appear more intense.'},
-
-  // ══════════════════════════════════════════════════════
-  // INFLUENCES ON ARTISTS & DESIGNERS (18 questions)
-  // ══════════════════════════════════════════════════════
-  {topic:'influences',type:'mcq',q:'According to the SQA course spec, "social and cultural influences" on artists and designers includes which of the following?',
-    opts:['Only the price of art materials','Living conditions, family and community, other artists/art movements, exposure to different cultures, physical environment, technology, politics, gender, religion, world events, and personal circumstances','Only what art school the artist attended','Only their nationality'],
-    ans:1,explain:'SQA list of influences: living conditions (economic conditions), family and community, other artists/art movements, exposure to different cultures, physical environment/geography, new and emerging technology, politics, gender, religion/belief, national/world events, other fields (science, literature), personal circumstances, health and wellbeing.'},
-  {topic:'influences',type:'mcq',q:'In the SQA exam, when asked about influences (Part b), you must:',
-    opts:['Simply name the influence and nothing else','IDENTIFY a specific influence AND DESCRIBE how it can be seen in the artist\'s or designer\'s work — 1 mark for identifying, 1 mark for describing the effect','Write a biography of the artist\'s life','Name as many influences as possible without explaining any'],
-    ans:1,explain:'Part b marking: 1 mark for naming a SPECIFIC correct influence (e.g. "influenced by Fauvism" not just "influenced by other artists") + 1 mark for describing HOW that influence can be seen in the work (e.g. "which led to his use of bold, non-naturalistic colours in his still life paintings"). Both are needed for full marks.'},
-  {topic:'influences',type:'mcq',q:'The Impressionist movement in art was influenced by:',
-    opts:['The discovery of oil paint in the 15th century','The invention of portable paint tubes, which allowed artists to paint outdoors (en plein air), capturing natural light directly from observation','The development of digital technology','Religious patronage of the Church'],
-    ans:1,explain:'Impressionism (c.1860s-1880s) was significantly influenced by: the invention of collapsible metal paint tubes (allowed outdoor painting), Japanese woodblock prints (flat colour, unusual composition), new scientific understanding of colour and light, photography (new ways of seeing/framing), and rapid industrialisation/urban life.'},
-  {topic:'influences',type:'mcq',q:'Pop Art, associated with artists like Andy Warhol and Roy Lichtenstein, was influenced by:',
-    opts:['Medieval religious iconography and church architecture','Post-war consumer culture, mass media, advertising, television, and popular culture in 1950s-60s America and Britain','Renaissance techniques and classical sculpture','Abstract Expressionism\'s emotional brushwork'],
-    ans:1,explain:'Pop Art (1950s-60s): influenced by post-war consumer boom, mass production, advertising, television, comic books, and celebrity culture. Artists commented on (and celebrated/critiqued) commercial culture by incorporating its imagery and techniques into fine art. Warhol\'s Campbell\'s Soup Cans, Lichtenstein\'s Ben-Day dot comics.'},
-  {topic:'influences',type:'mcq',q:'The Scottish Colourists (Peploe, Cadell, Hunter, Fergusson) were influenced by:',
-    opts:['German Expressionism and Soviet Constructivism','French Post-Impressionism and Fauvism — particularly their use of bold colour, painterly technique, and subjects like landscapes, still life, and figures','Dutch Golden Age portraiture and Baroque chiaroscuro','Pre-Raphaelite symbolism'],
-    ans:1,explain:'The Scottish Colourists were heavily influenced by visits to France and exposure to French avant-garde painting — particularly Post-Impressionists like Cézanne, and Fauvists like Matisse. This influenced their bold, vibrant colour palettes, loose brushwork, and attention to formal qualities over narrative content.'},
-  {topic:'influences',type:'mcq',q:'In design history, the BAUHAUS school (Germany, 1919-1933) was influential because:',
-    opts:['It revived historical ornamental decoration and craftsmanship','It pioneered the idea that art and craft should be combined with industrial production — "form follows function" — influencing modern graphic design, architecture, and product design','It introduced Impressionism to Germany','It founded the Pop Art movement'],
-    ans:1,explain:'Bauhaus (founded by Walter Gropius, 1919): combined fine art, craft, and industrial design under the principle that design should serve function ("form follows function"). Hugely influential on modern design, typography, architecture, and education. Forced to close by the Nazis in 1933 — many staff emigrated and spread its influence worldwide.'},
-  {topic:'influences',type:'mcq',q:'How might POLITICAL influences affect an artist\'s work?',
-    opts:['They would only affect the price of the artwork','Political events, ideologies, censorship, war, or social upheaval can directly shape what an artist creates, what subjects they explore, and the emotional tone of their work — e.g. war imagery, protest art','Politics only affects commercial design','Political influences only affect photography'],
-    ans:1,explain:'Political influences on art: war can inspire powerful protest art (Picasso\'s Guernica — Spanish Civil War), political regimes can censor or commission art (Soviet Socialist Realism), and political ideologies can inspire movements (revolutionary art, feminist art). Artists often respond to or comment on the political world around them.'},
-  {topic:'influences',type:'mcq',q:'How might an artist\'s PERSONAL CIRCUMSTANCES influence their work?',
-    opts:['Personal circumstances have no effect on an artist\'s work','Personal experiences — illness, relationships, loss, travel, financial hardship, or joy — can profoundly shape the themes, mood, and subject matter an artist chooses to explore','Only their formal education matters','Only where they were born matters'],
-    ans:1,explain:'Personal circumstances directly influence art: Frida Kahlo\'s physical pain and disability was central to her self-portraits; Van Gogh\'s mental health struggles are reflected in his intense, emotional work; Picasso\'s relationships shaped his depiction of women. Personal circumstances can influence: subject matter, emotional tone, style, and the urgency of the work.'},
-  {topic:'influences',type:'mcq',q:'How might TECHNOLOGY influence a designer\'s work?',
-    opts:['Technology has no impact on design','New materials, manufacturing processes, digital tools, and software enable designers to create things previously impossible — e.g. 3D printing, CAD, digital illustration, new plastics and composites','Only architects are affected by technology','Technology only affects graphic designers'],
-    ans:1,explain:'Technology influences design profoundly: digital tools (Adobe Creative Suite, CAD) allow rapid prototyping and experimentation; new materials (carbon fibre, smart materials) create new functional possibilities; the internet changed graphic design for screens; 3D printing enables complex forms. Emerging technology is explicitly listed in the SQA course spec as an influence.'},
-  {topic:'influences',type:'mcq',q:'ART NOUVEAU (c.1890-1910) was influenced by:',
-    opts:['Industrial mass production and minimalism','Natural forms (plants, flowers, insects), Japanese art, and a rejection of industrial mass production — characterised by flowing organic lines, decorative surfaces, and integration of fine and applied arts','Abstract Expressionism and Abstract art','Pop Art and consumer culture'],
-    ans:1,explain:'Art Nouveau: influenced by organic natural forms (sinuous plant stems, peacock feathers, flowing hair), Japanese woodblock prints (flat colour, organic line), Celtic ornamentation, and a Romantic rejection of industrial ugliness. Key designers: Alphonse Mucha, Charles Rennie Mackintosh (Glasgow), René Lalique. Characterised by flowing, curved, organic lines.'},
-  {topic:'influences',type:'fillin',q:'In the SQA exam, to gain full marks for an influences question, you must IDENTIFY the influence AND _____ how it can be seen in the artist\'s or designer\'s work.',ans:'describe',explain:'The 4-mark influence question awards: 1 mark per specific influence identified (max 2) + 1 mark per description of how that influence can be seen in any of the artist\'s/designer\'s work (max 2). Simply listing influences without describing their effect on the work will gain only half the marks available.'},
-  {topic:'influences',type:'fillin',q:'The early 20th century art movement that used bold, non-naturalistic colour for expressive effect — influencing the Scottish Colourists — is called _____.',ans:'Fauvism',explain:'Fauvism (from "les Fauves" = "the wild beasts"): early 20th century movement led by Henri Matisse and André Derain. Used pure, intense, non-naturalistic colour for emotional and expressive purposes rather than to represent reality accurately. Had a major influence on Scottish Colourists, particularly Peploe and Fergusson.'},
-
-  // ══════════════════════════════════════════════════════
-  // PORTFOLIOS & PROCESS (15 questions)
-  // ══════════════════════════════════════════════════════
-  {topic:'portfolio',type:'mcq',q:'In the Nat 5 Art and Design course, the EXPRESSIVE PORTFOLIO requires candidates to:',
-    opts:['Design a product for a commercial client','Produce investigative research responding to an agreed theme/stimulus, develop a single line of development, and produce a final expressive piece — plus an evaluation','Write an essay about a famous artist','Produce a design solution for a brief'],
-    ans:1,explain:'Expressive portfolio: (1) Investigative research — analytical drawings, studies responding to theme/stimulus. (2) Single line of development — showing visual continuity with research. (3) Final piece — realisation of the development. (4) Evaluation — justified personal opinions on decisions and effectiveness. Max 3 A2 sheets.'},
-  {topic:'portfolio',type:'mcq',q:'In the Nat 5 Art and Design course, the DESIGN PORTFOLIO requires candidates to:',
-    opts:['Paint a portrait of a famous designer','Produce investigative material and market research for a design brief, develop a single line of development, and produce a design solution — plus an evaluation','Write a report about design history','Produce an expressive final piece'],
-    ans:1,explain:'Design portfolio: (1) Investigative material and market research — visual research, competitor analysis. (2) Single line of development — showing visual continuity with research. (3) Design solution — the resolved design outcome. (4) Evaluation — justified opinions on decisions and the effectiveness of the design. Max 3 A2 sheets.'},
-  {topic:'portfolio',type:'mcq',q:'A "SINGLE LINE OF DEVELOPMENT" in a portfolio means:',
-    opts:['The portfolio must only contain drawings in pencil','A focused, coherent progression of ideas from initial research through to the final piece — showing how research and ideas have been developed and refined into one resolved outcome','The portfolio must be presented in a straight line','Only one material can be used throughout'],
-    ans:1,explain:'Single line of development: a focused creative journey showing how initial ideas have been progressively developed, refined, and resolved into a final outcome. It must show VISUAL CONTINUITY — the final piece should clearly connect to the research and development stages. Avoids scattered, unrelated explorations.'},
-  {topic:'portfolio',type:'mcq',q:'The EVALUATION in a portfolio requires candidates to:',
-    opts:['Copy a description from an art book','Express JUSTIFIED personal opinions on their creative decisions and the effectiveness of their work — explaining WHY they made decisions and evaluating how successfully the work achieves its aims','List all the materials they used','Copy the learning objectives'],
-    ans:1,explain:'Portfolio evaluation: personal, justified opinions on the creative process and outcomes. Must address: decisions made and why (justified), what worked well and why, what could be improved, how effectively the final work responds to the theme/brief. The SQA evaluation template is mandatory. No word count. Opinions must be JUSTIFIED, not just stated.'},
-  {topic:'portfolio',type:'mcq',q:'MARKET RESEARCH in the design portfolio involves:',
-    opts:['Buying products from a market','Researching existing designs, target audience preferences, competitor products, and market trends to inform the design solution — ensuring it is relevant and appropriate for its intended audience','Only researching the history of design','Only looking at the work of famous designers'],
-    ans:1,explain:'Market research: gathering information about the target audience, existing products, market trends, and competitors to ensure the design solution is relevant and appropriate. Can include: surveys, competitor analysis, mood boards, analysis of existing products. Informs functional and aesthetic design decisions.'},
-  {topic:'portfolio',type:'mcq',q:'ANALYTICAL DRAWING as part of the expressive portfolio involves:',
-    opts:['Copying photographs exactly','Close, careful observation and analysis of a subject — studying its form, structure, tonal qualities, texture, and surface characteristics in depth through drawing','Quick, loose sketching','Abstract mark-making only'],
-    ans:1,explain:'Analytical drawing: detailed, observational drawing that analyses the form, structure, tonal values, textures, and characteristics of a subject. Goes beyond copying — involves thinking carefully about what you are seeing. The foundation of investigative research in the expressive portfolio.'},
-  {topic:'portfolio',type:'mcq',q:'How many marks are awarded for the EXPRESSIVE PORTFOLIO in the overall course assessment?',
-    opts:['40 marks','20 marks','100 marks','50 marks'],
-    ans:2,explain:'Expressive portfolio = 100 marks (40% of total). Design portfolio = 100 marks (40% of total). Question paper = 40 marks scaled to 50 (20% of total). Total = 250 marks. Grade A–D based on combined performance across all three components.'},
-  {topic:'portfolio',type:'mcq',q:'In the portfolio assessment, the maximum physical size allowed for each portfolio is:',
-    opts:['Seven A3 sheets (like the Design & Manufacture assignment)','Three A2-sized, single-sided sheets (or equivalent)','Ten A4 pages','One A1 sheet'],
-    ans:1,explain:'Maximum portfolio size: three A2-sized, single-sided sheets or equivalent. Portfolios must fold to no larger than A1 for submission to SQA. The evaluation template is mandatory and should be attached to the first sheet without overlapping work or extending beyond the three A2 sheets.'},
-  {topic:'portfolio',type:'fillin',q:'The justified reflection on creative decisions and the effectiveness of the work that must be submitted with each portfolio is called an _____.',ans:'evaluation',explain:'The evaluation is a mandatory component of both portfolios. It must express JUSTIFIED personal opinions — not just describing what was done, but explaining why decisions were made and how effectively the work achieves its aims. The SQA provides a mandatory evaluation template. Centres must NOT provide model answers.'},
-  {topic:'portfolio',type:'fillin',q:'Research into target audience preferences, competitor products, and market trends to inform a design solution is called _____ research.',ans:'market',explain:'Market research informs the design portfolio by ensuring the design solution is appropriate for its intended audience and context. It demonstrates understanding of commercial design practice. Can include surveys, competitor analysis, demographic research, and analysis of existing products in the market.'},
-];
-
-// ═══════════════════════════════════════
-// STATE
-// ═══════════════════════════════════════
-let xp = 0, level = 1, streak = 0, bestStreak = 0;
-let totalAnswered = 0, totalCorrect = 0;
-let topicStats = { expressive:{a:0,c:0}, design:{a:0,c:0}, vocab:{a:0,c:0}, influences:{a:0,c:0}, portfolio:{a:0,c:0} };
-let dailyGoal = 10, dailyDone = 0;
-let quizPool = [], quizIdx = 0;
-let currentQ = null;
-let fcCards = [], fcIdx = 0, fcKnew = 0;
-let mockQuestions = [], mockIdx = 0, mockScore = 0;
-let mockTimer = null, mockTimeLeft = 0, mockStartTime = null;
-let wsScores = [{c:0,t:0},{c:0,t:0},{c:0,t:0}], wsSheet = 0;
-const WS_IDS = [
-  ['wq-ea1','wq-ea2','wq-ea3','wq-ea4','wq-ea5'],
-  ['wq-ds1','wq-ds2','wq-ds3','wq-ds4'],
-  ['wq-inf1','wq-inf2','wq-inf3','wq-inf4']
-];
-
-// ── PERSIST ──
-function saveState() {
-  try {
-    localStorage.setItem('nat5bio_v2', JSON.stringify({
-      xp, level, streak, bestStreak, totalAnswered, totalCorrect,
-      topicStats, dailyGoal, dailyDone: getDailyDone()
-    }));
-  } catch(e){}
-}
-function loadState() {
-  try {
-    const s = JSON.parse(localStorage.getItem('nat5bio_v2')||'{}');
-    xp = s.xp||0; level = s.level||1; streak = s.streak||0;
-    bestStreak = s.bestStreak||0; totalAnswered = s.totalAnswered||0;
-    totalCorrect = s.totalCorrect||0; topicStats = s.topicStats||topicStats;
-    dailyGoal = s.dailyGoal||10;
-    const today = new Date().toDateString();
-    const savedDay = s.dailyDay||'';
-    dailyDone = savedDay === today ? (s.dailyDone||0) : 0;
-  } catch(e){}
-}
-function getDailyDone(){ return dailyDone; }
-loadState();
-
-// ── NAV ──
-function nav(page) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('page-'+page).classList.add('active');
-  document.querySelector(`[data-page="${page}"]`)?.classList.add('active');
-  if (page==='progress') renderProgress();
-  if (page==='topics') renderTopicPage();
-}
-
-// ── TOPBAR ──
-function updateTopbar() {
-  document.getElementById('xp-val').textContent = xp;
-  document.getElementById('streak-val').textContent = streak;
-  document.getElementById('lv-badge').textContent = 'Lv '+level;
-}
-function showXPToast(pts) {
-  const t = document.getElementById('xp-toast');
-  t.textContent = '+'+pts+' XP ⭐';
-  t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'), 1800);
-}
-function addXP(pts) {
-  xp += pts;
-  const needed = level * 100;
-  if (xp >= needed) { level++; xp -= needed; showXPToast(pts); }
-  else showXPToast(pts);
-  updateTopbar();
-}
-
-// ── DAILY GOAL ──
-function updateGoal(inc=1) {
-  dailyDone += inc;
-  const pct = Math.min(100, (dailyDone/dailyGoal)*100);
-  document.getElementById('goal-fill').style.width = pct+'%';
-  document.getElementById('goal-txt').textContent = dailyDone+'/'+dailyGoal;
-  if (dailyDone >= dailyGoal) {
-    document.getElementById('goal-txt').textContent = '✅ Done!';
-  }
-}
-
-// ── PRACTICE ──
-function getPool() {
-  const t = document.getElementById('topic-sel').value;
-  const ty = document.getElementById('type-sel').value;
-  let pool = QUESTIONS.filter(q =>
-    (t==='all' || q.topic===t) &&
-    (ty==='all' || q.type===ty)
-  );
-  return shuffle(pool);
-}
-
-function newQuestion() {
-  if (!quizPool.length || quizIdx >= quizPool.length) {
-    quizPool = getPool();
-    quizIdx = 0;
-  }
-  currentQ = quizPool[quizIdx++];
-  renderQ(currentQ);
-  const pct = Math.min(100,(quizIdx/Math.max(quizPool.length,1))*100);
-  document.getElementById('q-progress-fill').style.width = pct+'%';
-}
-
-function renderQ(q) {
-  const topicName = TOPICS.find(t=>t.id===q.topic)?.name||'';
-  const diffTag = quizIdx <= 3 ? 'easy' : quizIdx <= 7 ? '' : 'hard';
-  const diffLabel = diffTag==='easy'?'Easy':diffTag==='hard'?'Hard':'Medium';
-  const letters = ['A','B','C','D'];
-  let inner = '';
-  if (q.type==='mcq') {
-    const shuffledOpts = q.opts.map((o,i)=>({o,correct:i===q.ans}));
-    inner = `<div class="opts">${shuffledOpts.map((op,i)=>`
-      <button class="opt-btn" data-correct="${op.correct}" onclick="checkMCQ(this,${op.correct})">
-        <span class="opt-letter">${letters[i]}</span>${op.o}
-      </button>`).join('')}</div>`;
-  } else {
-    inner = `<input class="fill-input" id="fill-ans" placeholder="Type your answer…" onkeydown="if(event.key==='Enter')checkFill()">
-      <div class="btn-row"><button class="btn btn-green" onclick="checkFill()">Check ✓</button><button class="btn btn-ghost" onclick="newQuestion()">Skip →</button></div>`;
-  }
-  document.getElementById('question-area').innerHTML = `
-    <div class="q-card">
-      <div class="q-card-header">
-        <span class="q-tag">${topicName.toUpperCase()}</span>
-        ${diffTag?`<span class="q-tag ${diffTag}">${diffLabel}</span>`:''}
-        <span class="q-num">Q${quizIdx} / ${quizPool.length}</span>
-      </div>
-      <div class="q-text">${q.q}</div>
-      ${inner}
-      <div class="explanation" id="expl">
-        <div class="expl-label">📚 Explanation</div>
-        ${q.explain||''}
-      </div>
-    </div>
-    <div class="btn-row" id="next-row" style="display:none">
-      <button class="btn btn-green" onclick="newQuestion()">Next Question →</button>
-    </div>`;
-}
-
-function checkMCQ(el, correct) {
-  document.querySelectorAll('.opt-btn').forEach(b=>b.disabled=true);
-  el.classList.add(correct?'correct':'wrong');
-  if (!correct) {
-    // Only highlight the single correct button, not all non-wrong ones
-    document.querySelectorAll('.opt-btn').forEach(b=>{
-      if(b.dataset.correct==='true') b.classList.add('correct');
-    });
-  }
-  recordAnswer(correct, currentQ?.topic);
-  document.getElementById('expl')?.classList.add('show');
-  const nr = document.getElementById('next-row');
-  if(nr) nr.style.display='flex';
-}
-
-function checkFill() {
-  const inp = document.getElementById('fill-ans');
-  if (!inp||!currentQ) return;
-  const val = inp.value.trim().toLowerCase();
-  const ans = currentQ.ans.toLowerCase();
-  const correct = val===ans || ans.includes(val) || val.includes(ans);
-  inp.classList.add(correct?'correct':'wrong');
-  inp.disabled = true;
-  document.querySelector('.btn-green')?.setAttribute('disabled','true');
-  if (!correct) {
-    const note = document.createElement('div');
-    note.style.cssText='color:var(--accent2);font-size:0.8rem;margin:6px 0';
-    note.textContent='✓ Correct answer: '+currentQ.ans;
-    inp.after(note);
-  }
-  recordAnswer(correct, currentQ?.topic);
-  document.getElementById('expl')?.classList.add('show');
-  const nr = document.getElementById('next-row');
-  if(nr) nr.style.display='flex';
-}
-
-function recordAnswer(correct, topic) {
-  totalAnswered++;
-  if(correct){ totalCorrect++; streak++; if(streak>bestStreak)bestStreak=streak; addXP(correct?10:2); }
-  else { streak=0; addXP(2); }
-  if(topic && topicStats[topic]){ topicStats[topic].a++; if(correct)topicStats[topic].c++; }
-  updateGoal();
-  updateTopbar();
-  saveState();
-}
-
-// ── FLASHCARDS ──
-function startFlashcards() {
-  const t = document.getElementById('fc-topic-sel').value;
-  fcCards = shuffle(QUESTIONS.filter(q=>t==='all'||q.topic===t));
-  fcIdx = 0; fcKnew = 0;
-  renderFC();
-}
-function renderFC() {
-  if (!fcCards.length) return;
-  const q = fcCards[fcIdx % fcCards.length];
-  const topicName = TOPICS.find(t=>t.id===q.topic)?.name||'';
-  const ans = q.type==='mcq' ? q.opts[q.ans] : q.ans;
-  document.getElementById('fc-front-text').textContent = q.q;
-  document.getElementById('fc-back-text').innerHTML = `<strong style="color:var(--accent4)">${ans}</strong>${q.explain?`<br><br><span style="font-size:0.8rem;color:var(--muted)">${q.explain}</span>`:''}`;
-  document.getElementById('fc-inner').classList.remove('flipped');
-  const total = fcCards.length;
-  const pct = Math.round((fcIdx/total)*100);
-  document.getElementById('fc-prog-txt').textContent = (fcIdx+1)+' / '+total;
-  document.getElementById('fc-prog-fill').style.width = pct+'%';
-  document.getElementById('fc-knew-txt').textContent = fcKnew;
-}
-function flipCard(){ document.getElementById('fc-inner').classList.toggle('flipped'); }
-function fcNext(knew) {
-  if(!fcCards.length) return;
-  if(knew){ fcKnew++; recordAnswer(true, fcCards[fcIdx%fcCards.length].topic); }
-  fcIdx++;
-  if(fcIdx >= fcCards.length){ fcIdx=0; fcCards=shuffle(fcCards); }
-  renderFC();
-}
-
-// ── MOCK EXAM ──
-let mockPaperType = 'paper1';
-function startMock(paper) {
-  mockPaperType = paper;
-  mockQuestions = shuffle(QUESTIONS).slice(0,25);
-  mockIdx = 0; mockScore = 0;
-  const mins = paper==='paper1'?30:40;
-  mockTimeLeft = mins*60;
-  mockStartTime = Date.now();
-  document.getElementById('mock-home').style.display='none';
-  document.getElementById('mock-exam').style.display='block';
-  document.getElementById('mock-results').style.display='none';
-  document.getElementById('mock-paper-label').textContent = paper==='paper1'?'Paper 1':'Paper 2';
-  document.getElementById('mock-total-live').textContent = 25;
-  mockTimer = setInterval(()=>{
-    mockTimeLeft--;
-    const m=Math.floor(mockTimeLeft/60), s=mockTimeLeft%60;
-    document.getElementById('mock-timer').textContent = String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
-    if(mockTimeLeft<=0){ clearInterval(mockTimer); mockShowResults(); }
-  },1000);
-  renderMockQ();
-}
-function renderMockQ() {
-  if(mockIdx>=mockQuestions.length){ mockEnd(); return; }
-  const q = mockQuestions[mockIdx];
-  const topicName = TOPICS.find(t=>t.id===q.topic)?.name||'';
-  const letters=['A','B','C','D'];
-  document.getElementById('mock-progress-fill').style.width=((mockIdx/25)*100)+'%';
-  document.getElementById('mock-score-live').textContent = mockScore;
-  let inner='';
-  if(q.type==='mcq'){
-    inner=`<div class="opts">${q.opts.map((o,i)=>`
-      <button class="opt-btn" data-correct="${i===q.ans}" onclick="mockCheckMCQ(this,${i===q.ans})">
-        <span class="opt-letter">${letters[i]}</span>${o}
-      </button>`).join('')}</div>`;
-  } else {
-    inner=`<input class="fill-input" id="mock-fill" placeholder="Type your answer…" onkeydown="if(event.key==='Enter')mockSubmit()">`;
-  }
-  document.getElementById('mock-q-area').innerHTML=`
-    <div class="q-card">
-      <div class="q-card-header">
-        <span class="q-tag">${topicName.toUpperCase()}</span>
-        <span class="q-num">Q${mockIdx+1}/25</span>
-      </div>
-      <div class="q-text">${q.q}</div>
-      ${inner}
-      <div class="explanation" id="mock-expl"><div class="expl-label">📚 Explanation</div>${q.explain||''}</div>
-    </div>`;
-}
-function mockCheckMCQ(el, correct) {
-  document.querySelectorAll('#mock-q-area .opt-btn').forEach(b=>b.disabled=true);
-  el.classList.add(correct?'correct':'wrong');
-  if (!correct) {
-    document.querySelectorAll('#mock-q-area .opt-btn').forEach(b=>{
-      if(b.dataset.correct==='true') b.classList.add('correct');
-    });
-  }
-  if(correct) mockScore++;
-  document.getElementById('mock-expl')?.classList.add('show');
-  document.getElementById('mock-score-live').textContent=mockScore;
-  setTimeout(()=>{ mockIdx++; renderMockQ(); }, 1400);
-}
-function mockSubmit() {
-  const inp=document.getElementById('mock-fill');
-  const q=mockQuestions[mockIdx];
-  if(!inp||!q) return;
-  const val=inp.value.trim().toLowerCase();
-  const ans=q.ans.toLowerCase();
-  const correct=val===ans||ans.includes(val)||val.includes(ans);
-  inp.classList.add(correct?'correct':'wrong');
-  inp.disabled=true;
-  if(correct) mockScore++;
-  document.getElementById('mock-expl')?.classList.add('show');
-  document.getElementById('mock-score-live').textContent=mockScore;
-  setTimeout(()=>{ mockIdx++; renderMockQ(); },1200);
-}
-function mockSkip(){ mockIdx++; renderMockQ(); }
-function mockEnd(){ clearInterval(mockTimer); mockShowResults(); }
-function mockShowResults() {
-  document.getElementById('mock-exam').style.display='none';
-  document.getElementById('mock-results').style.display='block';
-  const pct=Math.round((mockScore/25)*100);
-  const elapsed=Math.round((Date.now()-mockStartTime)/1000);
-  const mins=Math.floor(elapsed/60),secs=elapsed%60;
-  document.getElementById('mock-pct').textContent=pct+'%';
-  document.getElementById('mr-correct').textContent=mockScore;
-  document.getElementById('mr-wrong').textContent=25-mockScore;
-  document.getElementById('mr-time').textContent=mins+'m '+secs+'s';
-  let grade,colour,msg;
-  if(pct>=85){grade='A';colour='var(--accent)';msg='Outstanding! 🎉';}
-  else if(pct>=70){grade='B';colour='var(--accent4)';msg='Well done! 👏';}
-  else if(pct>=60){grade='C';colour='var(--accent3)';msg='Good effort! 😊';}
-  else if(pct>=45){grade='D';colour='#ff9f43';msg='Keep revising! 📚';}
-  else{grade='No Award';colour='var(--accent2)';msg="Don't give up! 💪";}
-  const g=document.getElementById('mock-grade');
-  g.textContent='Grade '+grade; g.style.background=colour+'22';
-  g.style.color=colour; g.style.border=`1px solid ${colour}44`;
-  document.getElementById('mock-msg').textContent=msg;
-  const circ=2*Math.PI*54, offset=circ-(pct/100)*circ;
-  const ring=document.getElementById('mock-ring');
-  ring.style.strokeDasharray=circ; ring.style.stroke=colour;
-  ring.style.strokeDashoffset=circ;
-  setTimeout(()=>{ ring.style.transition='stroke-dashoffset 1s ease'; ring.style.strokeDashoffset=offset; },100);
-}
-function restartMock(){ startMock(mockPaperType); }
-
-// ── WORKSHEET ENGINE ──
-function wsSwitchSheet(idx) {
-  wsSheet=idx;
-  document.querySelectorAll('.ws-tab').forEach((t,i)=>t.classList.toggle('wta',i===idx));
-  document.querySelectorAll('.ws-sheet2').forEach((s,i)=>{ s.classList.remove('wsa'); if(i===idx) s.classList.add('wsa'); });
-  updateWsStrip();
-}
-function wsMCQ(qid, el, correct) {
-  const q=document.getElementById(qid);
-  if(q.dataset.done==='1') return;
-  q.dataset.done='1';
-  q.querySelectorAll('.ws-opt2').forEach(o=>{o.disabled=true;o.onclick=null;});
-  el.classList.add(correct?'wc':'ww');
-  document.getElementById(qid+'-r')?.classList.add('show');
-  q.classList.add(correct?'ok':'bad');
-  wsRecord(correct);
-}
-function wsEq(qid, ids, answers) {
-  const q=document.getElementById(qid);
-  if(q.dataset.done==='1') return;
-  let allOk=true;
-  ids.forEach((id,i)=>{
-    const inp=document.getElementById(id);
-    if(!inp) return;
-    const v=inp.value.trim().toLowerCase().replace(/[^a-z0-9\- ]/g,'');
-    const a=answers[i].toLowerCase().replace(/[^a-z0-9\- ]/g,'');
-    const ok=v===a||v.includes(a)||a.includes(v)||(v.length>2&&(a.startsWith(v)||v.startsWith(a)));
-    inp.classList.add(ok?'ec':'ew'); inp.disabled=true;
-    if(!ok) allOk=false;
-  });
-  q.dataset.done='1';
-  q.classList.add(allOk?'ok':'bad');
-  document.getElementById(qid+'-r')?.classList.add('show');
-  q.querySelector('.ws-check').disabled=true;
-  wsRecord(allOk);
-}
-function wsPunnett(qid, ids, answers) {
-  const q=document.getElementById(qid);
-  if(q.dataset.done==='1') return;
-  let allOk=true;
-  ids.forEach((id,i)=>{
-    const inp=document.getElementById(id);
-    if(!inp) return;
-    const ok=inp.value.trim().toUpperCase()===answers[i];
-    const cell=inp.closest('.pun-cell');
-    if(cell) cell.classList.add(ok?'pc':'pw');
-    inp.disabled=true;
-    if(!ok){ allOk=false; inp.value=answers[i]; }
-  });
-  q.dataset.done='1';
-  q.classList.add(allOk?'ok':'bad');
-  document.getElementById(qid+'-r')?.classList.add('show');
-  q.querySelector('.ws-check').disabled=true;
-  wsRecord(allOk);
-}
-function wsReveal(qid) {
-  const q=document.getElementById(qid);
-  if(q.dataset.done==='1') return;
-  q.dataset.done='1';
-  const ta=document.getElementById(qid+'-ta');
-  if(ta){ ta.disabled=true; ta.classList.add(ta.value.trim().length>10?'ec':'ew'); }
-  document.getElementById(qid+'-r')?.classList.add('show');
-  q.querySelector('.ws-check').disabled=true;
-  q.classList.add('ok');
-  wsRecord(true);
-}
-function wsRecord(ok) {
-  wsScores[wsSheet].t++;
-  if(ok) wsScores[wsSheet].c++;
-  updateWsStrip();
-}
-function updateWsStrip() {
-  const s=wsScores[wsSheet];
-  const strip=document.getElementById('ws-score-strip');
-  if(s.t===0){ strip.style.display='none'; return; }
-  strip.style.display='flex';
-  const pct=Math.round((s.c/s.t)*100);
-  document.getElementById('ws-score-num').textContent=s.c+'/'+s.t;
-  document.getElementById('ws-score-fill2').style.width=pct+'%';
-  const msg=pct>=80?'🌟 Excellent! On track for an A/B!':pct>=60?'👍 Good — review what you missed':'📚 Keep revising — read the model answers';
-  document.getElementById('ws-score-msg').textContent=msg;
-}
-function wsMarkAll(idx) {
-  const prev=wsSheet; wsSheet=idx;
-  WS_IDS[idx].forEach(qid=>{
-    const q=document.getElementById(qid);
-    if(!q||q.dataset.done==='1') return;
-    document.getElementById(qid+'-r')?.classList.add('show');
-    q.querySelectorAll('.eq-in').forEach(i=>{ if(!i.disabled){i.disabled=true;i.classList.add('ew');} });
-    q.querySelectorAll('.pun-in').forEach(i=>{ if(!i.disabled){i.disabled=true;i.closest('.pun-cell')?.classList.add('pw');} });
-    q.querySelectorAll('.ws-ta').forEach(ta=>{ if(!ta.disabled){ta.disabled=true;ta.classList.add('ew');} });
-    q.dataset.done='1'; q.classList.add('bad');
-    q.querySelectorAll('.ws-check').forEach(b=>b.disabled=true);
-    wsRecord(false);
-  });
-  wsSheet=prev; updateWsStrip();
-}
-function wsReset2(idx) {
-  wsScores[idx]={c:0,t:0};
-  WS_IDS[idx].forEach(qid=>{
-    const q=document.getElementById(qid);
-    if(!q) return;
-    q.dataset.done='0'; q.className='ws-q';
-    document.getElementById(qid+'-r')?.classList.remove('show');
-    q.querySelectorAll('.ws-opt2').forEach(o=>{ o.classList.remove('wc','ww'); o.disabled=false; });
-    q.querySelectorAll('.eq-in').forEach(i=>{ i.value=''; i.disabled=false; i.classList.remove('ec','ew'); });
-    q.querySelectorAll('.pun-in').forEach(i=>{ i.value=''; i.disabled=false; i.closest('.pun-cell')?.classList.remove('pc','pw'); });
-    q.querySelectorAll('.ws-ta').forEach(ta=>{ ta.disabled=false; ta.classList.remove('ec','ew'); });
-    q.querySelectorAll('.ws-check').forEach(b=>b.disabled=false);
-  });
-  if(wsSheet===idx) updateWsStrip();
-}
-
-// ── TOPICS PAGE ──
-function renderTopicPage() {
-  const g=document.getElementById('topic-grid-page');
-  g.innerHTML='';
-  TOPICS.forEach(t=>{
-    const qs=QUESTIONS.filter(q=>q.topic===t.id).length;
-    const st=topicStats[t.id]||{a:0,c:0};
-    const pct=st.a>0?Math.round((st.c/st.a)*100):0;
-    const div=document.createElement('div');
-    div.className='topic-card sel';
-    div.innerHTML=`<div class="topic-icon">${t.icon}</div>
-      <div class="topic-name">${t.name}</div>
-      <div class="topic-count">${qs} questions</div>
-      <div class="topic-sub-text">${t.sub||''}</div>
-      <div class="topic-prog"><div class="topic-prog-fill" style="width:${pct}%"></div></div>`;
-    div.onclick=()=>{
-      document.getElementById('topic-sel').value=t.id;
-      nav('practice');
-      newQuestion();
-    };
-    g.appendChild(div);
-  });
-}
-
-// ── PROGRESS ──
-function renderProgress() {
-  document.getElementById('ps-total').textContent=totalAnswered;
-  document.getElementById('ps-correct').textContent=totalCorrect;
-  document.getElementById('ps-streak').textContent=bestStreak;
-  document.getElementById('ps-xp').textContent=xp;
-  const rows=document.getElementById('topic-prog-rows');
-  rows.innerHTML='';
-  TOPICS.forEach(t=>{
-    const st=topicStats[t.id]||{a:0,c:0};
-    const pct=st.a>0?Math.round((st.c/st.a)*100):0;
-    rows.innerHTML+=`<div class="prog-topic-row">
-      <div class="prog-topic-name">${t.icon} ${t.name}</div>
-      <div class="prog-topic-bar-wrap">
-        <div class="prog-topic-bar"><div class="prog-topic-fill" style="width:${pct}%"></div></div>
-      </div>
-      <div class="prog-topic-pct">${st.a>0?pct+'%':'—'}</div>
-    </div>`;
-  });
-}
-function resetAllProgress() {
-  if(!confirm('Reset all progress? This cannot be undone.')) return;
-  xp=0;level=1;streak=0;bestStreak=0;totalAnswered=0;totalCorrect=0;
-  topicStats={expressive:{a:0,c:0},design:{a:0,c:0},vocab:{a:0,c:0},influences:{a:0,c:0},portfolio:{a:0,c:0}};
-  dailyDone=0;
-  saveState(); updateTopbar(); updateGoal(0); renderProgress();
-}
-
-// ── SETTINGS ──
-function saveSettings() {
-  const name=document.getElementById('set-name').value.trim();
-  dailyGoal=parseInt(document.getElementById('set-goal').value)||10;
-  if(name) {
-    document.querySelector('.topbar-logo').innerHTML=`🏴󠁧󠁢󠁳󠁣󠁴󠁿 ${name}'s <span>Bio</span>`;
-  }
-  saveState();
-  const btn=document.querySelector('#page-settings .btn-green');
-  btn.textContent='✅ Saved!';
-  setTimeout(()=>btn.textContent='💾 Save',1500);
-}
-
-// ── UTILS ──
-function shuffle(arr){ const a=[...arr]; for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]; } return a; }
-
-// ── INIT ──
-updateTopbar();
-updateGoal(0);
-newQuestion();
-</script>
+<script src="assets/data.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
 </body>
 </html>
